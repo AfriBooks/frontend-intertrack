@@ -1,3 +1,65 @@
+
+Tools and Technologies
+
+    1. Javascript
+       1. arrow functions
+       2. array functions
+       3. spread operators
+    
+    2. React
+       1. react-router-dom
+    
+    3. Redux
+       1. redux-toolkit
+       2. react-redux
+
+    4. Development
+       1. VS Code
+          1. Javascript (ES6) Code Snippets
+          2. ES7 React Extension
+          3. ESLint Extension
+          4. CSS Peek
+
+        2. Chrome
+           1. React Developer Tools
+           2. Redux Developer Tools
+
+        3. Git
+
+
+Project development workflow
+   1. Create Google Spread Sheet
+   2. Add colomns Features, Description, State and Duration
+   3. Enter Products Component, Show list of products, Open, 2
+   4. Add time ? hours, rate 30USD/HR, cost ? USD
+   5. Add all features
+   6. Create a github repository
+   7. Add it as remote repository in VS Code
+   8. Commit changes
+   9. Push changes on github
+   10. Start => create new feature, Feature 1 in google spreadsheet
+   11. Create a new branch feature-1 for testing the workflow
+   12. Add "// branch feature-1" in App.jsx Line 1
+   13. Commit with message "feature 1"
+   14. Click publish changes
+   15. Open repository page on github
+   16. Create pull request
+   17. Merge pull request
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
