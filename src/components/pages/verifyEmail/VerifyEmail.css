@@ -63,7 +63,7 @@
     align-items: center;
 }
 
-.create-account-form-div-inner {
+.verify-email-form-div-inner {
     width: 90%;
     height: 60%;
     background-color: #f2f2f2;
@@ -74,7 +74,7 @@
     border-radius: 0.5rem;
 }
 
-.create-account-form-div-inner h3 {
+.verify-email-form-div-inner h3 {
     font-size: 2.5rem;
     margin-left: -4.8rem;
     margin-bottom: 10px;

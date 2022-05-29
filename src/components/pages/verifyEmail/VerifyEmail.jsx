@@ -45,7 +45,7 @@ export const VerifyEmail = () => {
             </div>
 
             <div className='verify-email-form-div'>
-                <div className='create-account-form-div-inner'>
+                <div className='verify-email-form-div-inner'>
                     <h3 className='Create account-h3'>Verification email<br/> sent</h3>
                     <p className='create-account-para-1'>A verification link has been sent to<br/>
                        <strong>bi*****@gmail.com.</strong> Check spam if not found in inbox.</p>
