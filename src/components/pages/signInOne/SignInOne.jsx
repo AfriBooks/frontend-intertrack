@@ -31,42 +31,42 @@ export const SignInOne = () => {
   return (
     <div className='signInOne'>
 
-<Header/>
+        <Header/>
 
-<div className='create-account-div'>
+        <div className='create-account-div'>
 
-<div className='create-account-div-left'>
+        <div className='create-account-div-left'>
 
-    <div className='create-account-bar'>
-        <h3>AfriBook</h3>
-       
-    </div>
-
-    <div className='signin-one-form-div'>
-        <div className='signin-one-form-div-inner'>
-            <h3 className='Create account-h3'>Wellcome back</h3>
-            <button className='create-account-google'>Create account with Google</button>
-            <div className='horizontal-line-div'>
-                <span><hr className='horizontal-line' /></span>
-                <span className='or-create-with'>Or create with</span>
-                <span><hr className='horizontal-line' /></span>
+            <div className='create-account-bar'>
+                <h3>AfriBook</h3>
+            
             </div>
-            <button className='create-account-email'><Link to="/register-form"> Create account with email </Link></button>
-            
-            
-            <p className='create-account-para-2'>Don't have an account? Sign up</p>
+
+            <div className='signin-one-form-div'>
+                <div className='signin-one-form-div-inner'>
+                    <h3 className='Create account-h3'>Wellcome back</h3>
+                    <button className='create-account-google'>Create account with Google</button>
+                    <div className='horizontal-line-div'>
+                        <span><hr className='horizontal-line' /></span>
+                        <span className='or-create-with'>Or create with</span>
+                        <span><hr className='horizontal-line' /></span>
+                    </div>
+                    <button className='create-account-email'><Link to="/sign-in-two"> Create account with email </Link></button>
+                    
+                    
+                    <p className='create-account-para-2'>Don't have an account? Sign up</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div className='create-account-div-right'>
+            <div className='create-account-card'>
+            {getProducts.length ? <div className='register-card-section'>{getProducts}</div> : ""}
+            </div>
+        </div>
 
         </div>
-    </div>
-</div>
-
-<div className='create-account-div-right'>
-    <div className='create-account-card'>
-    {getProducts.length ? <div className='register-card-section'>{getProducts}</div> : ""}
-    </div>
-</div>
-
-</div>
 
 
     </div>

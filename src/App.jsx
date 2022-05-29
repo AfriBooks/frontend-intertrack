@@ -5,6 +5,7 @@ import CreateAccount from "./components/pages/createAccount/CreateAccount";
 import { CreateAccountForm } from "./components/pages/createAccountForm/CreateAccountForm";
 import { Home } from "./components/pages/home/Home";
 import { SignInOne } from "./components/pages/signInOne/SignInOne";
+import { SignInTwo } from "./components/pages/signInTwo/SignInTwo";
 import { VerifyEmail } from "./components/pages/verifyEmail/VerifyEmail";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
                 <Route exact path= "/register-form"> <CreateAccountForm/> </Route>
                 <Route exact path= "/verify-email"> <VerifyEmail/> </Route>
                 <Route exact path= "/sign-in-one"> <SignInOne/> </Route>
+                <Route exact path= "/sign-in-two"> <SignInTwo/> </Route>
                 
             </Switch> 
 
