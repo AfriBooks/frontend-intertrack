@@ -2,18 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
-import productRducer from './features/productSlice';
+import store from './features/store/store';
 
 
-
-
-const store = configureStore({
-  reducer: {
-    products: productRducer,
-  },
-})
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

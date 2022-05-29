@@ -1,0 +1,82 @@
+.card--div {
+    width: 240px;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 15px;
+    border: 1px solid gainsboro;
+    opacity: 0.5;
+}
+
+.card--div:hover {
+    opacity: 1.0;
+}
+
+.card--img--div {
+    width: 100%;
+    height: 200px;
+    background-color: white;
+}
+
+.card--img {
+    width: 100%;
+    height: 100%;
+}
+
+.card--title--div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    font-size: 13px;
+}
+
+.card--specialist--div {
+    display: flex;
+    font-size: 13px;
+    padding: 5px 12px;
+}
+
+.specialist--photo--div {}
+
+.specialist--photo {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: gainsboro;
+}
+
+.card--bottom--div {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px 10px;
+    overflow: hidden;
+    font-size: 12px;
+}
+
+.card--name {}
+
+.starting-at {
+    font-size: 10px;
+}
+
+.star {
+    background-color: rgba(245, 245, 26, 0.966);
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .card--div {
+        width: 198px;
+        min-height: 240px;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        margin: 10px;
+        border: 1px solid gainsboro;
+        opacity: 0.5;
+    }
+}
+
+@media only screen and (min-width: 768px) {}
