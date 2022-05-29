@@ -1,5 +1,7 @@
 import React from 'react'
+import "./Home.css"
 import { Card } from '../../card/Card'
+import { Header } from '../../layout/header/Header'
 //import { useGetAllBooksQuery } from '../../../features/productApi/productApi'
 
 
@@ -25,9 +27,11 @@ export const Home = () => {
 // })
 
   return (
-    <div className='cards'>
-      <h1>home</h1>
-      <Card/>
+    <div className='home'>
+      <Header/>
+      <div className='home--card--container'>
+        <Card/>
+      </div>
     </div>
   )
 }
