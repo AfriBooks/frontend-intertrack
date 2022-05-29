@@ -1,0 +1,179 @@
+.signInTwo {
+    width: 100%;
+    height: 100vh;
+    background-color: #E5E5E5;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    background-color: aquamarine;
+}
+
+.create-account-div {
+    width: 90%;
+    height: 90%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.create-account-div-left {
+    width: 45%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.create-account-div-right {
+    width: 45%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signin-two-bar {
+    width: 50%;
+    height: 10%;
+    margin-top: 40px;
+    margin-bottom: 3rem;
+    margin-left: 2rem;
+}
+
+.back-arrow {
+    margin-top: 1rem;
+}
+
+.back-span {
+    font-size: 1rem;
+    padding-left: 1rem;
+    position: relative;
+    bottom: 5px;
+}
+
+.signin-two-form-div {
+    width: 70%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signin-two-form-div-inner {
+    width: 90%;
+    height: 85%;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 0.5rem;
+}
+
+.signin-two-form-div-inner h3 {
+    font-size: 2.5rem;
+    margin-left: -5rem;
+    margin-bottom: 10px;
+}
+
+.create-account-para-1 {
+    font-size: 1.1rem;
+    margin-left: 14px;
+}
+
+.create-account-para-2 {
+    font-size: 1.2rem;
+    margin-top: -2rem;
+}
+
+.create-account-google {
+    width: 300px;
+    height: 38px;
+    border-radius: 5px;
+}
+
+.create-account-email {
+    width: 300px;
+    height: 38px;
+    border-radius: 5px;
+}
+
+.horizontal-line-div {
+    display: flex;
+}
+
+.horizontal-line {
+    width: 95px;
+    border: 0.6px solid grey;
+    margin-top: 0.7rem;
+}
+
+.or-create-with {
+    font-size: 1.3rem;
+    padding: 0 1rem;
+}
+
+.create-account-card {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.register-card-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.register-card--div {
+    width: 200px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    margin: 1rem;
+    border: 1px solid gainsboro;
+    opacity: 0.5;
+}
+
+.register-card--div:hover {
+    opacity: 1.0;
+}
+
+.sign-up-btn {
+    width: 250px;
+    height: 38px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    margin: 1.8rem;
+    background-color: rgb(7, 136, 136);
+    border-radius: 7px;
+}
+
+.input-signin-two {
+    width: 260px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 1.3rem;
+}
+
+.checkbox-div-1 {
+    width: 250px;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-left: 1.5rem;
+}
+
+.checkbox {
+    margin-right: 0.6rem;
+}
