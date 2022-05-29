@@ -25,7 +25,8 @@ Tools and Technologies
            2. Redux Developer Tools
 
         3. Git
-
+   
+   5. CSS
 
 Project development workflow
    1. Create Google Spread Sheet
