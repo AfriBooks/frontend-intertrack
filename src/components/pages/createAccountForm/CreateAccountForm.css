@@ -1,0 +1,155 @@
+.createAccountForm {
+    width: 100%;
+    height: 100vh;
+    background-color: #E5E5E5;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    background-color: aquamarine;
+}
+
+.create-account-div {
+    width: 90%;
+    height: 90%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.create-account-div-left {
+    width: 45%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.create-account-div-right {
+    width: 45%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-account-bar {
+    width: 50%;
+    height: 10%;
+    margin-top: 40px;
+}
+
+.create-account-form-div {
+    width: 70%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.create-account-form-div-inner {
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 0.5rem;
+}
+
+.create-account-form-div-inner h3 {
+    font-size: 3rem;
+    margin-left: -4.4rem;
+    margin-bottom: 10px;
+}
+
+.create-account-para-1 {
+    font-size: 1.3rem;
+    margin-left: -1.4rem;
+}
+
+.create-account-google {
+    width: 300px;
+    height: 38px;
+    border-radius: 5px;
+}
+
+.create-account-email {
+    width: 300px;
+    height: 38px;
+    border-radius: 5px;
+}
+
+.horizontal-line-div {
+    display: flex;
+}
+
+.horizontal-line {
+    width: 95px;
+    border: 0.6px solid grey;
+    margin-top: 0.7rem;
+}
+
+.or-create-with {
+    font-size: 1.3rem;
+    padding: 0 1rem;
+}
+
+.create-account-para-2 {}
+
+.create-account-card {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.register-card-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.register-card--div {
+    width: 200px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    margin: 1rem;
+    border: 1px solid gainsboro;
+    opacity: 0.5;
+}
+
+.register-card--div:hover {
+    opacity: 1.0;
+}
+
+.form-container {
+    width: 80%;
+    height: 65%;
+}
+
+.input-div {
+    margin: 1.5rem;
+}
+
+.input {
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 1.3rem;
+}
+
+.sign-up-btn {
+    width: 250px;
+    height: 34px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    margin: 1.8rem;
+}
