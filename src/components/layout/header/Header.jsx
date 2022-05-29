@@ -13,7 +13,7 @@ export const Header = () => {
             <ul className='header-nav-bar-ul'>
                 <li className='header-list'><Link to="/"> Home </Link></li>
                 <li className='header-list'><Link to="/register"> Register </Link></li>
-                <li className='header-list'><Link to="/"> Sign In </Link></li>
+                <li className='header-list'><Link to="/sign-in-one"> Sign In </Link></li>
                 <li className='header-list'><Link to="/verify-email">VerifyEmail</Link></li>
 
             </ul>
