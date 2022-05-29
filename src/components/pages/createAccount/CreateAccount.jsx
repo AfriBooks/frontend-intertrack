@@ -1,8 +1,8 @@
 import React from 'react'
-import { Card } from '../../card/Card'
 import { useSelector } from 'react-redux'
 import { Header } from '../../layout/header/Header'
 import "./CreateAccount.css"
+import {Link} from "react-router-dom"
 
 function CreateAccount() {
   const {items, status} = useSelector(state => state.products);
@@ -48,7 +48,7 @@ function CreateAccount() {
                     <span className='or-create-with'>Or create with</span>
                     <span><hr className='horizontal-line' /></span>
                     </div>
-                  <button className='create-account-email'>Create account with email</button>
+                  <button className='create-account-email'><Link to="/register-form"> Create account with email </Link></button>
                   <p className='create-account-para-2'>Already have an account? Login</p>
 
                 </div>
