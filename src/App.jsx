@@ -4,6 +4,7 @@ import './App.css';
 import CreateAccount from "./components/pages/createAccount/CreateAccount";
 import { CreateAccountForm } from "./components/pages/createAccountForm/CreateAccountForm";
 import { DescBest } from "./components/pages/descBest/DescBest";
+import { FavoriteGenre } from "./components/pages/favoriteGenre/FavoriteGenre";
 import { Home } from "./components/pages/home/Home";
 import { NewPassword } from "./components/pages/newPassword/NewPassword";
 import { PasswordReset } from "./components/pages/passwordReset/PasswordReset";
@@ -27,6 +28,8 @@ function App() {
                 <Route exact path= "/password-reset"> <PasswordReset/> </Route>
                 <Route exact path= "/new-password"> <NewPassword/> </Route>
                 <Route exact path= "/desc-best"> <DescBest/> </Route>
+                <Route exact path= "/fav-genre"> <FavoriteGenre/> </Route>
+                
                 
             </Switch> 
 
