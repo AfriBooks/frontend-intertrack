@@ -2,6 +2,7 @@ import React from 'react'
 import "./SignInTwo.css"
 import { useSelector } from 'react-redux'
 import { Header } from '../../layout/header/Header';
+import {Link} from "react-router-dom"
 
 export const SignInTwo = () => {
 
@@ -63,7 +64,7 @@ export const SignInTwo = () => {
                                     <input className='checkbox' type="checkbox" id="remember-me" name="" value="" />
                                     <label for="apple">Remember me</label>
                                 </div>
-                                <p className='forgot-password'>Forgot password?</p>
+                                <p className='forgot-password'><Link to="/password-reset"> Forgot password? </Link></p>
                             </div>
 
                             <button className='sign-up-btn'>Sign in</button>

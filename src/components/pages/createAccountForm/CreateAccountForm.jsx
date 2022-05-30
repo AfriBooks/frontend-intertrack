@@ -2,6 +2,7 @@ import React from 'react'
 import { Header } from '../../layout/header/Header'
 import "./CreateAccountForm.css"
 import { useSelector } from 'react-redux'
+import {Link} from "react-router-dom"
 
 export const CreateAccountForm = () => {
 
@@ -65,7 +66,7 @@ export const CreateAccountForm = () => {
                             <input className='input' id="password" type="password" name="password" required placeholder="Enter your password"/><br/>
                         </div>
 
-                        <button className='sign-up-btn'>Sign up</button>
+                        <button className='sign-up-btn'><Link to="/verify-email">Sign up</Link></button>
 
                     </form>
 
