@@ -4,6 +4,8 @@ import './App.css';
 import CreateAccount from "./components/pages/createAccount/CreateAccount";
 import { CreateAccountForm } from "./components/pages/createAccountForm/CreateAccountForm";
 import { DescBest } from "./components/pages/descBest/DescBest";
+import { FavGenreThree } from "./components/pages/favGenreThree/FavGenreThree";
+import { FavGenreTwo } from "./components/pages/favGenreTwo/FavGenreTwo";
 import { FavoriteGenre } from "./components/pages/favoriteGenre/FavoriteGenre";
 import { Home } from "./components/pages/home/Home";
 import { NewPassword } from "./components/pages/newPassword/NewPassword";
@@ -29,6 +31,8 @@ function App() {
                 <Route exact path= "/new-password"> <NewPassword/> </Route>
                 <Route exact path= "/desc-best"> <DescBest/> </Route>
                 <Route exact path= "/fav-genre"> <FavoriteGenre/> </Route>
+                <Route exact path= "/fav-genre-two"> <FavGenreTwo/> </Route>
+                <Route exact path= "/fav-genre-three"> <FavGenreThree/> </Route>
                 
                 
             </Switch> 

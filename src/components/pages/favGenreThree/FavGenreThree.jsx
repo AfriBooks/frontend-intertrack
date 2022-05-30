@@ -1,12 +1,13 @@
 import React from 'react'
-import "./FavoriteGenre.css"
+import "./FavGenreThree.css"
 import {BsArrowLeft} from "react-icons/bs"
 import {Link} from "react-router-dom"
 
-export const FavoriteGenre = () => {
+export const FavGenreThree = () => {
   return (
-    <div className='favoriteGenre'>
-         
+    <div className='favGenreThree'>
+
+        
         <div className='fav-g--nav--div'>
             <div className='fav-g-nav-div-1'>
                 <div className='fav-g-afribook--div'>
@@ -40,7 +41,7 @@ export const FavoriteGenre = () => {
                 <h3 className='fav-h3'>Select your favorite Genre</h3>
                 <p>Select atleast 3 of your favorite genre. We use your favorite genre to make better book<br/>
                 recommendation which help tailor what you see on your feed.</p>
-                <p>You have selected <strong>0/3</strong> of your favorite genre</p>
+                <p>You have selected <strong>3/3</strong> of your favorite genre</p>
 
             </div>
             <div className='fav-g-div-2'>
@@ -77,15 +78,17 @@ export const FavoriteGenre = () => {
 
             </div>
             <div className='fav-g-div-4'>
-                <p>Don't see your favorite genre here?</p>
+                <div className='input-div'>
+                    <p className='input-para'>Enter other favorite genre:</p>
+	 		        <input className='input-genre' id="name" type="text" name="name" required placeholder="e.g science, hobbies"/>
+                </div>
                 <button className='continue'>Continue</button>
 
             </div>
         
         </div>
 
-    </div>
-    
 
+    </div>
   )
 }
