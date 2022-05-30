@@ -4,6 +4,7 @@ import './App.css';
 import CreateAccount from "./components/pages/createAccount/CreateAccount";
 import { CreateAccountForm } from "./components/pages/createAccountForm/CreateAccountForm";
 import { Home } from "./components/pages/home/Home";
+import { NewPassword } from "./components/pages/newPassword/NewPassword";
 import { PasswordReset } from "./components/pages/passwordReset/PasswordReset";
 import { SignInOne } from "./components/pages/signInOne/SignInOne";
 import { SignInTwo } from "./components/pages/signInTwo/SignInTwo";
@@ -23,6 +24,7 @@ function App() {
                 <Route exact path= "/sign-in-one"> <SignInOne/> </Route>
                 <Route exact path= "/sign-in-two"> <SignInTwo/> </Route>
                 <Route exact path= "/password-reset"> <PasswordReset/> </Route>
+                <Route exact path= "/new-password"> <NewPassword/> </Route>
                 
             </Switch> 
 

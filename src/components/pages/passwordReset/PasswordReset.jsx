@@ -3,6 +3,7 @@ import "./PasswordReset.css"
 import { useSelector } from 'react-redux'
 import { Header } from '../../layout/header/Header';
 import {BsArrowLeft} from "react-icons/bs"
+import {Link} from "react-router-dom"
 
 export const PasswordReset = () => {
 
@@ -50,7 +51,7 @@ export const PasswordReset = () => {
                     </div>
                     <p className='password-reset-para-2'>Didn't get any Reset link? Resend email</p>
                     
-                    <button className='sign-up-btn'>Send</button>
+                    <button className='sign-up-btn'><Link to="/new-password"> Send </Link></button>
 
                 </div>
             </div>
