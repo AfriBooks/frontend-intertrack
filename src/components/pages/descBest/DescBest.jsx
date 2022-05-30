@@ -1,11 +1,12 @@
 import React from 'react'
 import "./DescBest.css"
 import {BsArrowLeft} from "react-icons/bs"
+import { Header } from '../../layout/header/Header'
 
 export const DescBest = () => {
   return (
     <div className='descBest'>
-
+        <Header/>
         <div className='descBest--nav--div'>
             <div className='descBest-nav-div-1'>
                 <div className='afribook--div'>
