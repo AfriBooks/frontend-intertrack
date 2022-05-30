@@ -1,0 +1,133 @@
+.descBest {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.descBest--nav--div {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.descBest-nav-div-1 {
+    width: 70%;
+    height: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.afribook--div {
+    width: 40%;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.select--div {
+    width: 60%;
+    height: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+}
+
+.select-genre {
+    margin-left: 1rem;
+}
+
+.horiz--line {
+    width: 80px;
+    border: 1px solid rgba(250, 247, 247, 0.76);
+}
+
+.descBest-nav-div-2 {
+    width: 20%;
+    height: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.descBest-main-div {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-div-sub {
+    width: 30%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main-div-sub-para {
+    font-size: 1.3rem;
+}
+
+.reader-writer-div {
+    width: 60%;
+    height: 42px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.reader-div {
+    width: 45%;
+    height: inherit;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    border: 1px solid black;
+}
+
+.writer-div {
+    width: 45%;
+    height: inherit;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    border: 1px solid rgb(212, 212, 212)
+}
+
+.reader-label {
+    margin-left: 1.8rem;
+}
+
+.writer-label {
+    margin-left: 1.8rem;
+}
+
+.done {
+    width: 250px;
+    height: 37px;
+    background-color: rgb(37, 143, 143);
+    border-radius: 5px;
+}
