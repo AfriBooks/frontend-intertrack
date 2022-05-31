@@ -5,6 +5,7 @@ import { FiSearch } from 'react-icons/fi';
 import { BsCart } from 'react-icons/bs';
 import {IoIosNotificationsOutline  } from 'react-icons/io';
 import { IoIosArrowDown } from 'react-icons/io';
+import { RiMistFill } from 'react-icons/ri';
 
 
 export const Header = () => {
@@ -25,15 +26,15 @@ export const Header = () => {
 
           </div>
           <div className='header-nav-bar-1-c'>
-            <div><button>Switch to author</button></div>
+            <div className='switch-to-author-div'><button className='switch-to-author-btn'>Switch to author</button></div>
             <div className='cart-container-div'><div className='cart-div'><BsCart/></div><div className='cart-item-num-div'>5</div></div>
-            <div><IoIosNotificationsOutline/></div>
+            <div className='notification-div'><IoIosNotificationsOutline/></div>
             <div className='profle-div'>
-                <div><img src='' alt='' /></div>
-                <p>Bisola</p>
+                <div className='avatar-div'><img className='avatar' src='https://thumbs.dreamstime.com/b/default-avatar-profile-vector-user-profile-default-avatar-profile-vector-user-profile-profile-179376714.jpg' alt='pic' /></div>
+                <p className='profile-name'>Bisola</p>
 
             </div>
-            <div><IoIosArrowDown/></div>
+            <div className='drop-down-div'><IoIosArrowDown/></div>
 
           </div>
 
@@ -41,8 +42,7 @@ export const Header = () => {
 
 
         <div className='header-nav-bar-2'>
-            
-
+          <div className='header-nav-bar-2-a'>
             <ul className='header-nav-bar-ul'>
                 <li className='header-list'><Link to="/"> Home </Link></li>
                 <li className='header-list'><Link to="/register"> Register </Link></li>
@@ -53,6 +53,15 @@ export const Header = () => {
                 <li className='header-list'><Link to="/fav-genre-three"> Fav-Genre3 </Link></li>
             
             </ul>
+          </div>
+          <div className='header-nav-bar-2-b'>
+               <div className='filter-div'>
+                <p className='filter'>Filter</p>
+                <RiMistFill className='filter-icon'/>
+
+               </div>
+
+          </div>
 
         </div>
 

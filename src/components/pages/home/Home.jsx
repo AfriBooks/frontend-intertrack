@@ -2,6 +2,7 @@ import React from 'react'
 import "./Home.css"
 import { Card } from '../../card/Card'
 import { Header } from '../../layout/header/Header'
+import { Footer } from '../../layout/footer/Footer'
 //import { useGetAllBooksQuery } from '../../../features/productApi/productApi'
 
 
@@ -32,6 +33,7 @@ export const Home = () => {
       <div className='home--card--container'>
         <Card/>
       </div>
+      <Footer></Footer>
     </div>
   )
 }
