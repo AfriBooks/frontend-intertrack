@@ -1,17 +1,16 @@
 import React from 'react'
 import "./DescBest.css"
 import {BsArrowLeft} from "react-icons/bs"
-import { Header } from '../../layout/header/Header'
+import {Link} from "react-router-dom"
 
 export const DescBest = () => {
   return (
     <div className='descBest'>
-        <Header/>
         <div className='descBest--nav--div'>
             <div className='descBest-nav-div-1'>
                 <div className='afribook--div'>
                     <h3>AfriBook</h3>
-                    <div><BsArrowLeft className='back-arrow'/><span className='back-span'>Back</span></div>
+                    <Link to="/"><div><BsArrowLeft className='back-arrow'/><span className='back-span'>Back</span></div></Link>
                 </div>
                 <div className='select--div'>
                     <div className='select-div-a'>
