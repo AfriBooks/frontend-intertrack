@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Home.css"
+import {Link} from "react-router-dom"
 import { Card } from '../../card/Card'
 import { Header } from '../../layout/header/Header'
 import { Footer } from '../../layout/footer/Footer'
@@ -54,7 +55,7 @@ export const Home = () => {
 
       </div>
       <div className='popular-now-div'>
-        <h3>Popular now</h3>
+      <Link to="/popular-now"><h3>Popular now</h3></Link>
         <div className='view-all-div'>
              <p className='view-all'>View all</p>
              <MdOutlineKeyboardArrowRight/>

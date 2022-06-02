@@ -55,6 +55,8 @@ export const Header = () => {
                 <li className='header-list'><Link to="/fav-genre"> Fav-Genre </Link></li>
                 <li className='header-list'><Link to="/fav-genre-two"> Fav-Genre2 </Link></li>
                 <li className='header-list'><Link to="/fav-genre-three"> Fav-Genre3 </Link></li>
+                <li className='header-list'><Link to="/best-seller"> Best-Seller </Link></li>
+                <li className='header-list'><Link to="/new-added"> New-Add </Link></li>
             
             </ul>
           </div>
