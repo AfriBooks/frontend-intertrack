@@ -1,6 +1,5 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { Header } from '../../layout/header/Header'
 import "./CreateAccount.css"
 import {Link} from "react-router-dom"
 
@@ -28,14 +27,14 @@ function CreateAccount() {
 
   return (
     <div className='CreateAccount'>
-      <Header/>
+      
 
       <div className='create-account-div'>
 
         <div className='create-account-div-left'>
         
             <div className='create-account-bar'>
-              <h3>AfriBook</h3>
+              <h3><Link to="/">AfriBook</Link></h3>
             </div>
 
             <div className='create-account-form-div'>
