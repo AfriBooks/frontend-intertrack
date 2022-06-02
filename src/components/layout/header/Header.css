@@ -173,6 +173,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    font-size: 1.3rem;
 }
 
 .header-nav-bar-2-b {

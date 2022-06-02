@@ -6,6 +6,10 @@ import { BsCart } from 'react-icons/bs';
 import {IoIosNotificationsOutline  } from 'react-icons/io';
 import { IoIosArrowDown } from 'react-icons/io';
 import { RiMistFill } from 'react-icons/ri';
+import { AiOutlineHome } from 'react-icons/ai';
+import { FiBookOpen } from 'react-icons/fi';
+import { MdOutlineLibraryBooks } from 'react-icons/md';
+import { BsBag } from 'react-icons/bs';
 
 
 export const Header = () => {
@@ -14,7 +18,7 @@ export const Header = () => {
 
         <div className='header-nav-bar-1'>
           <div className='header-nav-bar-1-a'>
-              <h3 className='logo'>afRIBook</h3>  
+              <h3 className='logo'>AfriBook</h3>  
 
           </div>
           <div className='header-nav-bar-1-b'>
@@ -44,10 +48,10 @@ export const Header = () => {
         <div className='header-nav-bar-2'>
           <div className='header-nav-bar-2-a'>
             <ul className='header-nav-bar-ul'>
-                <li className='header-list'><Link to="/"> Home </Link></li>
-                <li className='header-list'><Link to="/register"> Register </Link></li>
-                <li className='header-list'><Link to="/sign-in-one"> Sign In </Link></li>
-                <li className='header-list'><Link to="/desc-best"> Best </Link></li>
+                <li className='header-list'><Link to="/"><AiOutlineHome/> Home </Link></li>
+                <li className='header-list'><Link to="/register"><FiBookOpen/> Register </Link></li>
+                <li className='header-list'><Link to="/sign-in-one"><MdOutlineLibraryBooks/> Sign In </Link></li>
+                <li className='header-list'><Link to="/desc-best"><BsBag/> Best </Link></li>
                 <li className='header-list'><Link to="/fav-genre"> Fav-Genre </Link></li>
                 <li className='header-list'><Link to="/fav-genre-two"> Fav-Genre2 </Link></li>
                 <li className='header-list'><Link to="/fav-genre-three"> Fav-Genre3 </Link></li>
