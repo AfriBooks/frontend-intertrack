@@ -3,6 +3,8 @@ import { useSelector } from 'react-redux'
 //import { useGetAllBooksQuery } from '../../features/productApi/productApi'
 import "./Card.css"
 import { BsStar } from 'react-icons/bs';
+import {Link} from "react-router-dom"
+
 
 
 
@@ -52,7 +54,7 @@ export const Card = () => {
 
 return (
         <div className='card'>
-            {getBooks.length ? <div className='card--section'>{getBooks}</div> : ""}
+            {getBooks.length ? <Link to="/book-detail"><div className='card--section'>{getBooks}</div></Link> : ""}
         </div>  
     ) 
             

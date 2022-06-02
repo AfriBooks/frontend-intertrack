@@ -1,0 +1,249 @@
+.bookDetails {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bookDetails-div-1 {
+    width: 90%;
+    height: 700px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.bookDetails-div-left {
+    width: 48%;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bookDetails-div-left-subdiv {
+    width: 85%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.bookDetails-div-left-subdiv-image-div {
+    width: 157px;
+    height: 200px;
+    margin-top: 3rem;
+}
+
+.subdiv-image-div-image {
+    width: 100%;
+    height: 100%;
+}
+
+.bookDetails-div-right {
+    width: 48%;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.title-book-div {
+    width: 100%;
+    height: 31%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 1.2rem;
+    padding-top: 2rem;
+}
+
+.book-summary-div {
+    width: 100%;
+    height: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 1.4rem;
+}
+
+.book-desc-div {
+    width: 100%;
+    height: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 1.4rem;
+}
+
+.radio-btn-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.radio-btn-div-sub {
+    display: flex;
+    margin-top: 5px;
+}
+
+.e-book-radio {
+    margin-left: 8px;
+}
+
+.buy-now-div {
+    display: flex;
+}
+
+.buy-now-btn {
+    width: 100px;
+    height: 30px;
+    background-color: rgb(25, 116, 25);
+    border-radius: 6px;
+    border: none;
+    color: white;
+}
+
+.add-to-cart-btn {
+    width: 100px;
+    height: 30px;
+    background-color: white;
+    border-radius: 6px;
+    margin-left: 20px;
+}
+
+.summary-h4 {
+    margin-bottom: -4rem;
+}
+
+.see-more {
+    position: relative;
+    top: 5px;
+}
+
+.bookDetails-div-2 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgb(30, 97, 30);
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.bookDetails-div-2-left {
+    width: 48%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bookDetails-div-2-right {
+    width: 48%;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.review-div {
+    width: 80%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 1.3rem;
+}
+
+.textarea-div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 7px;
+}
+
+.textarea {
+    width: 260px;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    margin-top: -8px;
+}
+
+.post-btn {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    border: none;
+    background-color: white;
+}
+
+.single-review-div {
+    width: 80%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 1.3rem;
+    border-bottom: 2px solid gainsboro;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.bottom-line-div {
+    display: flex;
+    font-size: 1.2rem;
+}
+
+.bottom-line {
+    width: 190px;
+    border: 1px solid gainsboro;
+    margin: 5px 8px 0 0;
+}
+
+.See-more-replies {
+    margin-right: 8px;
+}
+
+.bookDetails-div-3 {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+.viewall-div {
+    display: flex;
+}
+
+.bookDetails-div-3-a {
+    width: 80%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3rem
+}
+
+.bookDetails-div-3-b {
+    width: 80%;
+    height: 77%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
