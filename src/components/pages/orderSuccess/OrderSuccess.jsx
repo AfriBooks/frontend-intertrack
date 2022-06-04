@@ -31,7 +31,7 @@ export const OrderSuccess = () => {
                     <span><hr className='deliveryInfo-line' /></span>
 
                     <div className='pay-info-div'>
-                        <div className='tick-2'>2</div>
+                        <div className='tick-2'><IoMdCheckmark/></div>
                         <p>Payment Info</p>
 
                     </div>
@@ -50,7 +50,7 @@ export const OrderSuccess = () => {
 
             <div className='orderSuccess-div-2'>
                 <div className='orderSuccess-div-2-sub'>
-                    <div className='order-ok-div'><IoMdCheckmark/></div>
+                    <div className='order-ok-div-container'><div className='order-ok-div'><IoMdCheckmark/></div></div>
                     <h3>Order Summary</h3>
                     <div className='orderSuccess-para-div'>
                         <p className='orderSuccess-para'>Your orders have been successfully placed, go to my Deliveries </p>

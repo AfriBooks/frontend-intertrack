@@ -11,6 +11,7 @@ import { FavGenreThree } from "./components/pages/favGenreThree/FavGenreThree";
 import { FavGenreTwo } from "./components/pages/favGenreTwo/FavGenreTwo";
 import { FavoriteGenre } from "./components/pages/favoriteGenre/FavoriteGenre";
 import { Home } from "./components/pages/home/Home";
+import { Library } from "./components/pages/library/Library";
 import { NewAdded } from "./components/pages/newAdded/NewAdded";
 import { NewPassword } from "./components/pages/newPassword/NewPassword";
 import { OrderSuccess } from "./components/pages/orderSuccess/OrderSuccess";
@@ -47,6 +48,7 @@ function App() {
                 <Route exact path= "/delivery-info"> <DeliveryInfo/> </Route>
                 <Route exact path= "/payment-info"> <PaymentInfo/> </Route>
                 <Route exact path= "/order-success"> <OrderSuccess/> </Route>
+                <Route exact path= "/library"> <Library/> </Route>
                 
                 
             </Switch> 
