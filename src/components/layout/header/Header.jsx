@@ -31,7 +31,7 @@ export const Header = () => {
           </div>
           <div className='header-nav-bar-1-c'>
             <div className='switch-to-author-div'><button className='switch-to-author-btn'>Switch to author</button></div>
-            <div className='cart-container-div'><div className='cart-div'><BsCart/></div><div className='cart-item-num-div'>5</div></div>
+            <div className='cart-container-div'><div className='cart-div'><Link to="/delivery-info"><BsCart/></Link></div><div className='cart-item-num-div'>5</div></div>
             <div className='notification-div'><IoIosNotificationsOutline/></div>
             <div className='profle-div'>
                 <div className='avatar-div'><img className='avatar' src='https://thumbs.dreamstime.com/b/default-avatar-profile-vector-user-profile-default-avatar-profile-vector-user-profile-profile-179376714.jpg' alt='pic' /></div>

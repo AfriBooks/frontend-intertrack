@@ -5,6 +5,7 @@ import { BestSellerBook } from "./components/pages/bestSellerBook/BestSellerBook
 import { BookDetails } from "./components/pages/bookDetails/BookDetails";
 import CreateAccount from "./components/pages/createAccount/CreateAccount";
 import { CreateAccountForm } from "./components/pages/createAccountForm/CreateAccountForm";
+import { DeliveryInfo } from "./components/pages/deliveryInfo/DeliveryInfo";
 import { DescBest } from "./components/pages/descBest/DescBest";
 import { FavGenreThree } from "./components/pages/favGenreThree/FavGenreThree";
 import { FavGenreTwo } from "./components/pages/favGenreTwo/FavGenreTwo";
@@ -41,6 +42,7 @@ function App() {
                 <Route exact path= "/popular-now"> <PopularNow/> </Route>
                 <Route exact path= "/best-seller"> <BestSellerBook/> </Route>
                 <Route exact path= "/new-added"> <NewAdded/> </Route>
+                <Route exact path= "/delivery-info"> <DeliveryInfo/> </Route>
                 
                 
             </Switch> 
