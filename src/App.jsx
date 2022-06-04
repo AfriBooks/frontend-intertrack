@@ -13,7 +13,9 @@ import { FavoriteGenre } from "./components/pages/favoriteGenre/FavoriteGenre";
 import { Home } from "./components/pages/home/Home";
 import { NewAdded } from "./components/pages/newAdded/NewAdded";
 import { NewPassword } from "./components/pages/newPassword/NewPassword";
+import { OrderSuccess } from "./components/pages/orderSuccess/OrderSuccess";
 import { PasswordReset } from "./components/pages/passwordReset/PasswordReset";
+import { PaymentInfo } from "./components/pages/paymentInfo/PaymentInfo";
 import { PopularNow } from "./components/pages/popularNow/PopularNow";
 import { SignInOne } from "./components/pages/signInOne/SignInOne";
 import { SignInTwo } from "./components/pages/signInTwo/SignInTwo";
@@ -43,6 +45,8 @@ function App() {
                 <Route exact path= "/best-seller"> <BestSellerBook/> </Route>
                 <Route exact path= "/new-added"> <NewAdded/> </Route>
                 <Route exact path= "/delivery-info"> <DeliveryInfo/> </Route>
+                <Route exact path= "/payment-info"> <PaymentInfo/> </Route>
+                <Route exact path= "/order-success"> <OrderSuccess/> </Route>
                 
                 
             </Switch> 
