@@ -1,0 +1,319 @@
+.paymentInfo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+.deliveryInfo-div-1 {
+    width: 80%;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+}
+
+.deliveryInfo-div-1-a {
+    width: 17%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.deliveryInfo-checkout-div {
+    border-left: 1px solid gray;
+}
+
+.checkout {
+    padding-left: 0.8rem;
+}
+
+.deliveryInfo-div-1-b {
+    width: 47%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.4rem;
+}
+
+.deliv-info-div {
+    display: flex;
+}
+
+.pay-info-div {
+    display: flex;
+}
+
+.order-div {
+    display: flex;
+}
+
+.tick-1 {
+    width: 10px;
+    height: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 8px;
+    border: 1px solid black;
+    border-radius: 50%;
+    font-weight: 700;
+    margin: 3px 8px 0 0;
+    background-color: green;
+    color: white;
+}
+
+.tick-2 {
+    width: 10px;
+    height: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 8px;
+    border: 1px solid black;
+    border-radius: 50%;
+    font-weight: 700;
+    margin: 3px 8px 0 0;
+}
+
+.tick-3 {
+    width: 10px;
+    height: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 8px;
+    border: 1px solid black;
+    border-radius: 50%;
+    font-weight: 700;
+    margin: 3px 8px 0 0;
+}
+
+.deliveryInfo-line {
+    width: 40px;
+    border: 1px solid gainsboro;
+}
+
+.deliveryInfo-div-2 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-top: 1px solid gainsboro;
+}
+
+.deliveryInfo-div-2-left {
+    width: 37%;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.paymentInfo-div-2-left-sub {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+.payment-Info-h3 {
+    width: 60%;
+}
+
+.payment-Info-para {
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.payment-info-form {
+    width: 60%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.payment-input {
+    width: 270px;
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 1.3rem;
+    font-size: 1.1rem;
+    border: 1px solid gainsboro;
+}
+
+.expiration-date-div {
+    display: flex;
+    margin-left: 0;
+}
+
+.payment-input-exp {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 1.3rem;
+    font-size: 1.1rem;
+    border: 1px solid gainsboro;
+    margin-right: 3.2rem;
+}
+
+.payment-address-textarea {
+    width: 270px;
+    height: 70px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    border: 1px solid gainsboro;
+}
+
+.pay-amount-btn {
+    width: 270px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: gainsboro;
+    border: none;
+    margin-top: 1rem;
+}
+
+.deliveryInfo-div-2-right {
+    width: 35%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.deliveryInfo-div-2-right-sub {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.deliveryInfo-div-2-right-sub-sub {
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.order-summary-div {
+    width: 65%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 27px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.order-summary {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.single-order-div {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.single-order-image-div {
+    width: 21%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.single-order-image {
+    width: 100%;
+    height: 100%;
+}
+
+.single-order-title-div {
+    width: 40%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 1.2rem;
+}
+
+.single-order-count-div {
+    width: 20%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.single-order-count-div-sub {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 15px;
+    font-size: 1.1rem;
+}
+
+.add-btn {
+    width: 12px;
+    height: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.minus-btn {
+    width: 12px;
+    height: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.total-div {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    border-top: 1px solid gainsboro;
+}

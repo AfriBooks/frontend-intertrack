@@ -75,7 +75,7 @@ export const DeliveryInfo = () => {
                         
                         </div>
 
-                        <button className='Continue-to-payment-btn'><Link to="/">Continue to payment Info</Link></button>
+                        <button className='Continue-to-payment-btn'><Link to="/payment-info">Continue to payment Info</Link></button>
 
                     </form>
 
