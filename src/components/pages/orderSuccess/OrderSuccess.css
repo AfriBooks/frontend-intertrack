@@ -85,6 +85,8 @@
     border-radius: 50%;
     font-weight: 700;
     margin: 3px 8px 0 0;
+    background-color: green;
+    color: white;
 }
 
 .tick-3 {
@@ -126,9 +128,20 @@
     margin-bottom: 6rem;
 }
 
+.order-ok-div-container {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px dashed green;
+}
+
 .order-ok-div {
-    width: 30px;
-    height: 30px;
+    width: 90%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;

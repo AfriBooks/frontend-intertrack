@@ -1,0 +1,155 @@
+.library {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.library-div {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+.my-Lbrary-div {
+    width: 69%;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.library-btn-div {
+    width: 69%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.downloads-btn {
+    width: 150px;
+    height: 37px;
+    border-radius: 6px;
+    background-color: green;
+    border: none;
+    color: white;
+}
+
+.current-reads-btn {
+    width: 150px;
+    height: 37px;
+    border-radius: 6px;
+    border: none;
+    background-color: white;
+}
+
+.wish-List-btn {
+    width: 150px;
+    height: 37px;
+    border-radius: 6px;
+    border: none;
+    background-color: white;
+}
+
+.archive-btn {
+    width: 150px;
+    height: 37px;
+    border-radius: 6px;
+    border: none;
+    background-color: white;
+}
+
+.library-search-div {
+    width: 69%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.library-search-div-sub {
+    width: 40%;
+    height: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.library-search-icon-div {
+    display: flex;
+    width: 220px;
+    height: 32px;
+    border-radius: 6px;
+    border: 1px solid gainsboro;
+    background-color: white;
+}
+
+.library-filter-div {
+    display: flex;
+}
+
+.library-search-icon-div-sub {
+    width: 20px;
+    height: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-library {
+    width: 200px;
+    height: 32px;
+    border-radius: 0 6px 6px 0;
+    border: none;
+    font-size: 1.2rem;
+}
+
+.library-filter {
+    margin-right: 10px;
+}
+
+.next-div {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.next-div-sub {
+    width: 50%;
+    height: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+.page-number-div {
+    width: 12px;
+    height: 12px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    margin: 0 8px;
+}
+
+.next {
+    margin: 0 6px;
+}

@@ -26,7 +26,7 @@ export const NewAdded = () => {
                 <div className='next-div-sub'>
                     <p>Showing results pages</p>
                     <div className='page-number-div'>1</div>
-                    <p>of 2 pages</p>
+                    <p>of 24 pages</p>
                     <p className='next'>Next</p>
                     <div><MdOutlineKeyboardArrowRight/> </div>
 
