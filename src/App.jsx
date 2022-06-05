@@ -1,6 +1,7 @@
 //feature-1
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import './App.css';
+import { BestRomance } from "./components/pages/bestRomance/BestRomance";
 import { BestSellerBook } from "./components/pages/bestSellerBook/BestSellerBook";
 import { BookDetails } from "./components/pages/bookDetails/BookDetails";
 import CreateAccount from "./components/pages/createAccount/CreateAccount";
@@ -49,6 +50,7 @@ function App() {
                 <Route exact path= "/payment-info"> <PaymentInfo/> </Route>
                 <Route exact path= "/order-success"> <OrderSuccess/> </Route>
                 <Route exact path= "/library"> <Library/> </Route>
+                <Route exact path= "/best-romance"> <BestRomance/> </Route>
                 
                 
             </Switch> 
