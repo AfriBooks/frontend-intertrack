@@ -50,6 +50,7 @@ export const Header = () => {
             <ul className='header-nav-bar-ul'>
                 <li className='header-list'><Link to="/"><AiOutlineHome/> Home </Link></li>
                 <li className='header-list'><Link to="/library"><FiBookOpen/> My Library </Link></li>
+                <li className='header-list'><Link to="/genre"><MdOutlineLibraryBooks/> Genre </Link></li>
                 <li className='header-list'><Link to="/register"> Register </Link></li>
                 <li className='header-list'><Link to="/sign-in-one"><MdOutlineLibraryBooks/> Sign In </Link></li>
                 <li className='header-list'><Link to="/desc-best"><BsBag/> Best </Link></li>

@@ -11,6 +11,7 @@ import { DescBest } from "./components/pages/descBest/DescBest";
 import { FavGenreThree } from "./components/pages/favGenreThree/FavGenreThree";
 import { FavGenreTwo } from "./components/pages/favGenreTwo/FavGenreTwo";
 import { FavoriteGenre } from "./components/pages/favoriteGenre/FavoriteGenre";
+import { Genre } from "./components/pages/genre/Genre";
 import { Home } from "./components/pages/home/Home";
 import { Library } from "./components/pages/library/Library";
 import { NewAdded } from "./components/pages/newAdded/NewAdded";
@@ -51,6 +52,7 @@ function App() {
                 <Route exact path= "/order-success"> <OrderSuccess/> </Route>
                 <Route exact path= "/library"> <Library/> </Route>
                 <Route exact path= "/best-romance"> <BestRomance/> </Route>
+                <Route exact path= "/genre"> <Genre/> </Route>
                 
                 
             </Switch> 
