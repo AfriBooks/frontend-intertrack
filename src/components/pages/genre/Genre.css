@@ -1,0 +1,114 @@
+.genre {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.genre-div {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fbfbfb;
+}
+
+.genre-div-1 {
+    width: 55%;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.genre-search-div {
+    width: 198px;
+    height: 26px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.genre-search-icon {
+    width: 18px;
+    height: 26px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.genre-search-bar {
+    width: 180px;
+    height: 26px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    border: none;
+}
+
+.genre-div-2 {
+    width: 58%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 12px 0 15px 0;
+}
+
+.genre-div-2-a {
+    width: 100%;
+    height: 33%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.genre-div-2-b {
+    width: 100%;
+    height: 33%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.genre-div-2-c {
+    width: 100%;
+    height: 33%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.genre-outside-div {
+    width: 110px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 255, 0);
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.genre-inside-div {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}

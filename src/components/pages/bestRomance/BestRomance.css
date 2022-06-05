@@ -22,7 +22,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: aquamarine;
 }
 
 .romance-back-arrow {
@@ -42,7 +41,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(227, 255, 127);
 }
 
 .bestRomance-view-all-div {
