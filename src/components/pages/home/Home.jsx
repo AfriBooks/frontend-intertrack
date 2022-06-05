@@ -65,6 +65,17 @@ export const Home = () => {
       <div className='home--card--container'>
         <Card/>
       </div>
+
+      <div className='newly-added-books-div'>
+          <h3><Link to="/new-added"> Newly added books </Link></h3>
+          <div className='view-newly-added-books-div'>
+              <p>View all</p>
+              <div><MdOutlineKeyboardArrowRight/> </div>
+
+          </div>
+
+      </div>
+
       <Footer></Footer>
     </div>
   )

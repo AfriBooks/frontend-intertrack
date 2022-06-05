@@ -1,7 +1,7 @@
 import React from 'react'
 import "./VerifyEmail.css"
 import { useSelector } from 'react-redux'
-import { Header } from '../../layout/header/Header';
+
 import {BsArrowLeft} from "react-icons/bs"
 
 
@@ -33,7 +33,7 @@ export const VerifyEmail = () => {
   return (
     <div className='verifyEmail'>
 
-        <Header/>
+        
 
         <div className='create-account-div'>
 

@@ -5,11 +5,9 @@ import { FiSearch } from 'react-icons/fi';
 import { BsCart } from 'react-icons/bs';
 import {IoIosNotificationsOutline  } from 'react-icons/io';
 import { IoIosArrowDown } from 'react-icons/io';
-import { RiMistFill } from 'react-icons/ri';
 import { AiOutlineHome } from 'react-icons/ai';
 import { FiBookOpen } from 'react-icons/fi';
 import { MdOutlineLibraryBooks } from 'react-icons/md';
-import { BsBag } from 'react-icons/bs';
 
 export const HeaderLibrary = () => {
   return (

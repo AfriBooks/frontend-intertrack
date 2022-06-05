@@ -2,6 +2,8 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import "./CreateAccount.css"
 import {Link} from "react-router-dom"
+import { FcGoogle } from 'react-icons/fc';
+import { MdOutlineEmail } from 'react-icons/md';
 
 function CreateAccount() {
   const {items, status} = useSelector(state => state.products);
@@ -41,13 +43,13 @@ function CreateAccount() {
                 <div className='create-account-form-div-inner'>
                   <h3 className='Create account-h3'>Create account</h3>
                   <p className='create-account-para-1'>Choose how you will like to create your account</p>
-                  <button className='create-account-google'>Create account with Google</button>
+                  <button className='create-account-google'><FcGoogle/> Create account with Google</button>
                   <div className='horizontal-line-div'>
                     <span><hr className='horizontal-line' /></span>
                     <span className='or-create-with'>Or create with</span>
                     <span><hr className='horizontal-line' /></span>
                     </div>
-                  <button className='create-account-email'><Link to="/register-form"> Create account with email </Link></button>
+                  <button className='create-account-email'><Link to="/register-form"> <MdOutlineEmail/> Create account with email </Link></button>
                   <p className='create-account-para-2'>Already have an account? Login</p>
 
                 </div>

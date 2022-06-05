@@ -17,13 +17,15 @@
     background-color: #ffffff;
     margin: 1rem;
     border: 1px solid gainsboro;
-    opacity: 0.5;
+    /* opacity: 0.5;*/
     border-radius: 10px;
 }
 
+
+/*
 .card--div:hover {
     opacity: 1.0;
-}
+}*/
 
 .product {
     width: 70%;

@@ -1,12 +1,11 @@
 .signInOne {
     width: 100%;
     height: 100vh;
-    background-color: #E5E5E5;
+    background-color: #fbfbfb;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-end;
-    background-color: aquamarine;
 }
 
 .create-account-div {
@@ -66,8 +65,8 @@
 
 .signin-one-form-div-inner {
     width: 90%;
-    height: 65%;
-    background-color: #f2f2f2;
+    height: 70%;
+    background-color: #fbfbfb;
     display: flex;
     flex-direction: column;
     justify-content: space-around;

@@ -18,7 +18,7 @@ export const Header = () => {
 
         <div className='header-nav-bar-1'>
           <div className='header-nav-bar-1-a'>
-              <h3 className='logo'>AfriBook</h3>  
+              <h3 className='logo'> AfriBook</h3>  
 
           </div>
           <div className='header-nav-bar-1-b'>
@@ -57,7 +57,7 @@ export const Header = () => {
                 <li className='header-list'><Link to="/fav-genre-two"> Fav-Genre2 </Link></li>
                 <li className='header-list'><Link to="/fav-genre-three"> Fav-Genre3 </Link></li>
                 <li className='header-list'><Link to="/best-seller"> Best-Seller </Link></li>
-                <li className='header-list'><Link to="/new-added"> New-Add </Link></li>
+                
             
             </ul>
           </div>

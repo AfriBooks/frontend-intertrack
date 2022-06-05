@@ -1,8 +1,9 @@
 import React from 'react'
 import "./SignInOne.css"
 import { useSelector } from 'react-redux'
-import { Header } from '../../layout/header/Header';
 import {Link} from "react-router-dom"
+import { FcGoogle } from 'react-icons/fc';
+import { MdOutlineEmail } from 'react-icons/md';
 
 
 export const SignInOne = () => {
@@ -31,7 +32,7 @@ export const SignInOne = () => {
   return (
     <div className='signInOne'>
 
-        <Header/>
+    
 
         <div className='create-account-div'>
 
@@ -45,13 +46,13 @@ export const SignInOne = () => {
             <div className='signin-one-form-div'>
                 <div className='signin-one-form-div-inner'>
                     <h3 className='Create account-h3'>Wellcome back</h3>
-                    <button className='create-account-google'>Login with Google</button>
+                    <button className='create-account-google'><FcGoogle/> Login with Google</button>
                     <div className='horizontal-line-div'>
                         <span><hr className='horizontal-line' /></span>
                         <span className='or-create-with'>Or create with</span>
                         <span><hr className='horizontal-line' /></span>
                     </div>
-                    <button className='create-account-email'><Link to="/sign-in-two"> Login with Email </Link></button>
+                    <button className='create-account-email'><Link to="/sign-in-two"><MdOutlineEmail/> Login with Email </Link></button>
                     
                     
                     <p className='create-account-para-2'>Don't have an account? Sign up</p>

@@ -1,7 +1,7 @@
 .footer {
     width: 100%;
     height: 400px;
-    background-color: rgb(17, 104, 46);
+    background-color: #5A7C65;
     display: flex;
     flex-direction: column;
     justify-content: center;

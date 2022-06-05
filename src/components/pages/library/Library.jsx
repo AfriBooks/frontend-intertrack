@@ -13,7 +13,7 @@ export const Library = () => {
         <HeaderLibrary/>
 
         <div className='library-div'>
-            <div className='my-Lbrary-div'>My Lbrary</div>
+            <div className='my-Lbrary-div'>My Library</div>
             <div className='library-btn-div'>
                 <button className='downloads-btn'>Downloads</button>
                 <button className='current-reads-btn'>Current reads</button>
