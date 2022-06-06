@@ -158,7 +158,7 @@
     align-items: center;
 }
 
-.header-nav-bar-2 {
+.header-library-nav-bar-2 {
     width: 100%;
     height: 40%;
     display: flex;
@@ -167,7 +167,7 @@
     align-items: center;
 }
 
-.header-nav-bar-2-a {
+.header-library-nav-bar-2-a {
     width: 60%;
     height: inherit;
     display: flex;
@@ -177,7 +177,7 @@
     font-size: 1.3rem;
 }
 
-.header-nav-bar-2-b {
+.header-library-nav-bar-2-b {
     width: 40%;
     height: inherit;
     display: flex;

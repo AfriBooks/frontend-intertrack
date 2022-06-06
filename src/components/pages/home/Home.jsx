@@ -5,10 +5,52 @@ import { Card } from '../../card/Card'
 import { Header } from '../../layout/header/Header'
 import { Footer } from '../../layout/footer/Footer'
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
+import { useSelector } from 'react-redux'
+import { BsStar } from 'react-icons/bs';
 //import { useGetAllBooksQuery } from '../../../features/productApi/productApi'
 
 
 export const Home = () => {
+
+  const {items, status} = useSelector(state => state.products);
+
+  const getBooksTwo = items.map((productItem) => {
+          
+    return (
+
+        <div className="card-type-2--div">
+                    
+            <div key={productItem.id} className="productItem">
+                
+                <div className="card-two--img--div">
+                    <img className='card-two--img' src= {productItem.book_image} alt='' />
+                </div>
+                
+                <div className='card-two--title--div'>
+                    <div className="card-two--title--div-sub">
+                        <span className='card-two--title'><strong></strong>{productItem.title}</span>
+                    </div>
+                    
+                    <div className="card-two--author--div">
+                        <span className='card--name'>Author{productItem.category} </span>
+                    </div>
+                      
+                    <div className='card-two-price-div'>  
+                        <span className='card--price'><span className='starting-at'>$</span> {productItem.price}</span>
+                    </div>
+                    
+                    <div className="card-two--star--div">
+                        <span className='card-two-star'><BsStar/><BsStar/><BsStar/><BsStar/> </span> 
+                        
+                    </div>
+                </div>
+        
+
+            </div>
+        </div>
+
+      )
+})
 
    //const {data, error, isLoading} = useGetAllBooksQuery();
 
@@ -71,6 +113,22 @@ export const Home = () => {
           <div className='view-newly-added-books-div'>
               <p>View all</p>
               <div><MdOutlineKeyboardArrowRight/> </div>
+
+          </div>
+
+      </div>
+
+      <div className='home-card-two-div'>
+          <div className='home-card-two-div-a'>
+          {getBooksTwo.length ? <div className='card-two--section'>{getBooksTwo}</div> : "Loading..."}
+
+          </div>
+          <div className='home-card-two-div-b'>
+          {getBooksTwo.length ? <div className='card-two--section'>{getBooksTwo}</div> : "Loading..."}
+
+          </div>
+          <div className='home-card-two-div-c'>
+          {getBooksTwo.length ? <div className='card-two--section'>{getBooksTwo}</div> : "Loading..."}
 
           </div>
 

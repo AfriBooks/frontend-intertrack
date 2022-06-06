@@ -54,7 +54,7 @@ export const Card = () => {
 
 return (
         <div className='card'>
-            {getBooks.length ? <Link to="/book-detail"><div className='card--section'>{getBooks}</div></Link> : ""}
+            {getBooks.length ? <Link to="/book-detail"><div className='card--section'>{getBooks}</div></Link> : "Loading..."}
         </div>  
     ) 
             
