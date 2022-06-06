@@ -1,7 +1,7 @@
 import React from 'react'
 import "./VerifyEmail.css"
 import { useSelector } from 'react-redux'
-
+import {Link} from "react-router-dom"
 import {BsArrowLeft} from "react-icons/bs"
 
 
@@ -41,7 +41,7 @@ export const VerifyEmail = () => {
 
             <div className='create-account-bar'>
                 <h3>AfriBook</h3>
-                <BsArrowLeft className='back-arrow'/><span className='back-span'>Back</span>
+                <Link to="/"><BsArrowLeft className='back-arrow'/><span className='back-span'>Back</span></Link>
             </div>
 
             <div className='verify-email-form-div'>

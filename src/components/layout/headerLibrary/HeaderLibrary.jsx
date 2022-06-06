@@ -42,8 +42,8 @@ export const HeaderLibrary = () => {
         </div>
 
 
-        <div className='header-nav-bar-2'>
-          <div className='header-nav-bar-2-a'>
+        <div className='header-library-nav-bar-2'>
+          <div className='header-library-nav-bar-2-a'>
             <ul className='header-nav-bar-ul'>
                 <li className='header-list'><Link to="/"><AiOutlineHome/> Home </Link></li>
                 <li className='header-list'><Link to="/library"><FiBookOpen/> My Library </Link></li>
@@ -55,7 +55,7 @@ export const HeaderLibrary = () => {
             
             </ul>
           </div>
-          <div className='header-nav-bar-2-b'>
+          <div className='header-library-nav-bar-2-b'>
                <div className='filter-div'>
                
 
