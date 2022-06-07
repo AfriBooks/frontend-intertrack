@@ -54,7 +54,7 @@
     bottom: 5px;
 }
 
-.signin-one-form-div {
+.signinOne-form-div {
     width: 70%;
     height: 80%;
     display: flex;
@@ -63,7 +63,7 @@
     align-items: center;
 }
 
-.signin-one-form-div-inner {
+.signinOne-form-div-inner {
     width: 90%;
     height: 70%;
     background-color: #fbfbfb;

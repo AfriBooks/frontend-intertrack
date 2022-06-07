@@ -1,7 +1,6 @@
 import React from 'react'
 import "./SignInTwo.css"
 import { useSelector } from 'react-redux'
-import { Header } from '../../layout/header/Header';
 import {Link} from "react-router-dom"
 
 export const SignInTwo = () => {
@@ -30,50 +29,50 @@ export const SignInTwo = () => {
   return (
     <div className='signInTwo'>
 
-        <Header/>
+        
 
         <div className='create-account-div'>
 
         <div className='create-account-div-left'>
 
             <div className='signin-two-bar'>
-                <h3>AfriBook</h3>
+               <div className='signinTwo-afribook'> <h3>AfriBook</h3></div>
             
             </div>
 
             <div className='signin-two-form-div'>
                 <div className='signin-two-form-div-inner'>
-                    <h3 className='signin-two-h3'>Wellcome back</h3>
+                    <div className='signin-two-h3-div'><h3 className='signin-two-h3'>Wellcome back</h3></div>
                     
-                    <div class="form-container">
+                    <div class="form-two-container">
 
-                        <form action="#" id="signin-form" name="signin-form">
+                        <form className='signin-two-form' action="#" id="signin-two-form" name="signin-two-form">
                             
-                            <div className='input-div'>
+                            <div className='input-two-div'>
                                 <label className='email-label' id="email-label">Email</label><br/>
                                 <input className='input-signin-two' id="email" type="email" name="email" required placeholder="Enter your email address"/><br/>
                             </div>
 
-                            <div className='input-div'>
+                            <div className='input-two-div'>
                                 <label className='password-label' id="password-label">Password</label><br/>
                                 <input className='input-signin-two' id="password" type="password" name="password" required placeholder="Enter your password"/><br/>
                             </div>
 
-                            <div className='checkbox-div-1'>
-                                <div className='checkbox-div-2'>
-                                    <input className='checkbox' type="checkbox" id="remember-me" name="" value="" />
-                                    <label for="apple">Remember me</label>
+                            <div className='checkbox-two-div-1'>
+                                <div className='checkbox-two-div-2'>
+                                    <input className='checkbox-two' type="checkbox" id="remember-me" name="" value="" />
+                                    <label for="checkbox-two">Remember me</label>
                                 </div>
                                 <p className='forgot-password'><Link to="/password-reset"> Forgot password? </Link></p>
                             </div>
 
-                            <button className='sign-up-btn'>Sign in</button>
+                            <button className='sign-up-two-btn'>Sign in</button>
 
                         </form>
 
                     </div>
                     
-                    <p className='create-account-para-2'>Don't have an account? Sign up</p>
+                    <p className='create-account-para-two-2'>Don't have an account? Sign up</p>
 
                 </div>
             </div>

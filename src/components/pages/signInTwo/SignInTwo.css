@@ -1,12 +1,11 @@
 .signInTwo {
     width: 100%;
     height: 100vh;
-    background-color: #E5E5E5;
+    background-color: #fbfbfb;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-end;
-    background-color: aquamarine;
 }
 
 .create-account-div {
@@ -38,27 +37,15 @@
 }
 
 .signin-two-bar {
-    width: 50%;
+    width: 63%;
     height: 10%;
     margin-top: 40px;
     margin-bottom: 3rem;
-    margin-left: 2rem;
-}
-
-.back-arrow {
-    margin-top: 1rem;
-}
-
-.back-span {
-    font-size: 1rem;
-    padding-left: 1rem;
-    position: relative;
-    bottom: 5px;
 }
 
 .signin-two-form-div {
     width: 70%;
-    height: 90%;
+    height: 95%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,56 +54,27 @@
 
 .signin-two-form-div-inner {
     width: 90%;
-    height: 85%;
-    background-color: #f2f2f2;
+    height: 95%;
+    background-color: #fbfbfb;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: center;
     border-radius: 0.5rem;
 }
 
-.signin-two-form-div-inner h3 {
-    font-size: 2.5rem;
-    margin-left: -5rem;
-    margin-bottom: 10px;
-}
-
-.create-account-para-1 {
-    font-size: 1.1rem;
-    margin-left: 14px;
-}
-
-.create-account-para-2 {
-    font-size: 1.2rem;
-    margin-top: -2rem;
-}
-
-.create-account-google {
-    width: 300px;
-    height: 38px;
-    border-radius: 5px;
-}
-
-.create-account-email {
-    width: 300px;
-    height: 38px;
-    border-radius: 5px;
-}
-
-.horizontal-line-div {
+.form-two-container {
+    width: 100%;
+    height: 70%;
     display: flex;
+    flex-direction: column;
 }
 
-.horizontal-line {
-    width: 95px;
-    border: 0.6px solid grey;
-    margin-top: 0.7rem;
-}
-
-.or-create-with {
-    font-size: 1.3rem;
-    padding: 0 1rem;
+.signin-two-form {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .create-account-card {
@@ -146,14 +104,14 @@
     opacity: 1.0;
 }
 
-.sign-up-btn {
-    width: 250px;
+.sign-up-two-btn {
+    width: 260px;
     height: 38px;
     border-radius: 5px;
     font-size: 1.5rem;
-    margin: 1.8rem;
-    background-color: rgb(7, 136, 136);
-    border-radius: 7px;
+    margin: 1.8rem 1.8rem 1.8rem 0;
+    background-color: #bfc3c0;
+    border: none;
 }
 
 .input-signin-two {
@@ -161,9 +119,10 @@
     height: 30px;
     border-radius: 5px;
     font-size: 1.3rem;
+    border: 1px solid gainsboro;
 }
 
-.checkbox-div-1 {
+.checkbox-two-div-1 {
     width: 250px;
     height: 20px;
     display: flex;
@@ -171,9 +130,15 @@
     justify-content: space-between;
     align-items: center;
     font-size: 1.2rem;
-    margin-left: 1.5rem;
 }
 
-.checkbox {
+.checkbox-two {
     margin-right: 0.6rem;
+}
+
+.create-account-para-two-2 {
+    position: relative;
+    left: 40px;
+    bottom: 30px;
+    font-size: 1.2rem;
 }
