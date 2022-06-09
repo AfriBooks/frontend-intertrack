@@ -18,7 +18,7 @@ export const Header = () => {
 
         <div className='header-nav-bar-1'>
           <div className='header-nav-bar-1-a'>
-              <h3 className='logo'> AfriBook</h3>  
+              <div className='logo-div'><h3 className='logo'> AfriBook</h3> </div> 
 
           </div>
           <div className='header-nav-bar-1-b'>
@@ -51,14 +51,15 @@ export const Header = () => {
                 <li className='header-list'><Link to="/"><AiOutlineHome/> Home </Link></li>
                 <li className='header-list'><Link to="/library"><FiBookOpen/> My Library </Link></li>
                 <li className='header-list'><Link to="/genre"><MdOutlineLibraryBooks/> Genre </Link></li>
-                <li className='header-list'><Link to="/register"> Register </Link></li>
+                <li className='header-list'><Link to="/delivery-info"><BsCart/> My order </Link></li>
+                {/*<li className='header-list'><Link to="/register"> Register </Link></li>
                 <li className='header-list'><Link to="/sign-in-one"><MdOutlineLibraryBooks/> Sign In </Link></li>
                 <li className='header-list'><Link to="/desc-best"><BsBag/> Best </Link></li>
                 <li className='header-list'><Link to="/fav-genre"> Fav-Genre </Link></li>
                 <li className='header-list'><Link to="/fav-genre-two"> Fav-Genre2 </Link></li>
                 <li className='header-list'><Link to="/fav-genre-three"> Fav-Genre3 </Link></li>
                 <li className='header-list'><Link to="/best-seller"> Best-Seller </Link></li>
-                <li className='header-list'><Link to="/best-romance"> Best-Romance </Link></li>
+                <li className='header-list'><Link to="/best-romance"> Best-Romance </Link></li>*/}
                 
             
             </ul>

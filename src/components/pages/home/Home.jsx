@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Home.css"
+//import frame from '../../images/frame.png'
 import {Link} from "react-router-dom"
 import { Card } from '../../card/Card'
 import { Header } from '../../layout/header/Header'
@@ -18,7 +19,7 @@ export const Home = () => {
           
     return (
 
-        <div className="card-type-2--div">
+        <div className="card-type-2--div-home">
                     
             <div key={productItem.id} className="productItem">
                 
@@ -35,12 +36,12 @@ export const Home = () => {
                         <span className='card--name'>Author{productItem.category} </span>
                     </div>
                       
-                    <div className='card-two-price-div'>  
+                   {/* <div className='card-two-price-div'>  
                         <span className='card--price'><span className='starting-at'>$</span> {productItem.price}</span>
-                    </div>
+                    </div>*/}
                     
                     <div className="card-two--star--div">
-                        <span className='card-two-star'><BsStar/><BsStar/><BsStar/><BsStar/> </span> 
+                        <span className='card-two-star'><BsStar className='card-type-two-star'/><BsStar className='card-type-two-star'/><BsStar className='card-type-two-star'/><BsStar className='card-type-two-star'/> </span> 
                         
                     </div>
                 </div>
@@ -74,13 +75,15 @@ export const Home = () => {
   return (
     <div className='home'>
       <Header/>
-      <div className='advert-div'>
-          <div className='advert-div-a'>
+     
+      <div className='advert-banner'>
+          
+          <div className='advert-div-a-home'>
               <h3 className='recommended-h3'>Recommended for you</h3>
 
           </div>
           <div className='advert-div-b'>
-              <div className='book-image-div'><img className='book-image' src='https://brittlepaper.com/wp-content/uploads/2021/06/81wazwmthal_custom-a049cb82b9d3d25d2729deb5a1ac5106b52ded22.jpeg' alt=''/></div>
+              <div className='book-image-div-home'><img className='book-image' src='https://brittlepaper.com/wp-content/uploads/2021/06/81wazwmthal_custom-a049cb82b9d3d25d2729deb5a1ac5106b52ded22.jpeg' alt=''/></div>
               <div className='book-title-div'>
                 <div className='book-title-div-sub'>
                   <h3 className='book-title'>Book title</h3>
@@ -96,7 +99,7 @@ export const Home = () => {
           </div>
 
       </div>
-      <div className='popular-now-div'>
+      <div className='home-popular-now-div'>
       <Link to="/popular-now"><h3>Popular now</h3></Link>
         <div className='view-all-div'>
              <p className='view-all'>View all</p>
@@ -104,7 +107,7 @@ export const Home = () => {
         </div>
 
       </div>
-      <div className='home--card--container'>
+      <div className='home--card--container-1'>
         <Card/>
       </div>
 
@@ -118,7 +121,7 @@ export const Home = () => {
 
       </div>
 
-      <div className='home-card-two-div'>
+      <div className='home-card-two-container'>
           <div className='home-card-two-div-a'>
           {getBooksTwo.length ? <div className='card-two--section'>{getBooksTwo}</div> : "Loading..."}
 

@@ -19,7 +19,7 @@ export const Card = () => {
           
         return (
 
-            <div className="card--div">
+            <div className="card--div-1">
                         
                 <div key={product.id} className="product">
                     
