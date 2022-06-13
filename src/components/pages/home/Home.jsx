@@ -8,12 +8,14 @@ import { Footer } from '../../layout/footer/Footer'
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import { useSelector } from 'react-redux'
 import { BsStar } from 'react-icons/bs';
+
 //import { useGetAllBooksQuery } from '../../../features/productApi/productApi'
 
 
 export const Home = () => {
 
   const {items, status} = useSelector(state => state.products);
+  
 
   const getBooksTwo = items.map((productItem) => {
           
@@ -24,7 +26,7 @@ export const Home = () => {
             <div key={productItem.id} className="productItem">
                 
                 <div className="card-two--img--div">
-                    <img className='card-two--img' src= {productItem.book_image} alt='' />
+                <Link to={`/product/${productItem.id}`}><img className='card-two--img' src= {productItem.image} alt='' /></Link>
                 </div>
                 
                 <div className='card-two--title--div'>

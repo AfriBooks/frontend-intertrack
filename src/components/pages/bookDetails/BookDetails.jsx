@@ -6,27 +6,50 @@ import { IoIosArrowDown } from 'react-icons/io';
 import { RiThumbUpLine } from 'react-icons/ri';
 import { Footer } from '../../layout/footer/Footer';
 import { MdKeyboardArrowRight } from 'react-icons/md';
+import { useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux'
+import { addToCart } from '../../../features/cart/cartSlice';
+import { useHistory } from 'react-router-dom';
+
+
+
+
 
 export const BookDetails = () => {
+    const {singleItem, status} = useSelector(state => state.singleProduct);
+    console.log(singleItem)
+
+    const dispatch = useDispatch();
+    const history = useHistory()
+
+    const handleAddToCart = (singleProduct) => {
+         dispatch(addToCart(singleProduct));
+         history.push("/delivery-info");
+    };
+   
+const { id } = useParams();
+console.log(id);
+
   return (
     <div className='bookDetails'>
         <Header/>
-        
+
         <div className='bookDetails-div-1'>
 
             <div className='bookDetails-div-left'>
                     <div className='bookDetails-div-left-subdiv'>
                          <div className='bookDetails-div-left-subdiv-image-div'>
-                             <img className='subdiv-image-div-image' src='https://brittlepaper.com/wp-content/uploads/2021/06/zainab-takes-new-york.jpeg' alt='' />
+                             <img className='subdiv-image-div-image' src={singleItem.image} alt=''/>
 
                          </div>
                     </div>
             </div>
             <div className='bookDetails-div-right'>
                 <div className='title-book-div'>
-                    <h3 className='title-book'>Zainab takes new york</h3>
-                    <p className='author-name'>Author name</p>
-                    <p className='paper-book'><strong>Paperback: N3000</strong></p>
+                    <h3 className='title-book'>{singleItem.title}</h3>
+                    <p className='author-name'>{singleItem.category}</p>
+                    <p className='paper-book'><strong>Paperback: N{singleItem.price}</strong></p>
                     <p className='e-book'><strong> Ebook: N1500</strong></p>
                     <div className='rating-div'><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/></div>
                     <div className='radio-btn-div'>
@@ -43,21 +66,14 @@ export const BookDetails = () => {
                     </div>
                     <div className='buy-now-div'>
                         <button className='buy-now-btn'>Buy now</button>
-                        <button className='add-to-cart-btn'>Add to cart</button>
+                        <button className='add-to-cart-btn' onClick={() => handleAddToCart(singleItem)}>Add to cart</button>
 
                     </div>
 
                 </div>
                 <div className='book-summary-div'>
                     <h4 className='summary-h4'>Book Summary</h4>
-                    <p className='summary-para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                     Praesent ullamcorper dapibus diam. Sed faucibus consectetur laoreet.
-                      Proin ac nibh turpis. Mauris efficitur efficitur dui eu dapibus.
-                       Cras interdum nisl et sodales dapibus.
-                        Aliquam erat volutpat. Proin ante nisi, laoreet molestie dui a, porttitor viverra sem.
-                         Quisque pulvinar ultricies sapien ut lacinia. 
-                         Curabitur dapibus pretium augue, eget malesuada justo hendrerit quis. 
-                         Etiam ac leo eget leo porta posuere in at dui <br/><span className='see-more'>See more...</span> </p>
+                    <p className='summary-para'>{singleItem.description} <br/><span className='see-more'>See more...</span> </p>
 
                 </div>
                 <div className='book-desc-div'>
@@ -161,6 +177,8 @@ export const BookDetails = () => {
             </div>
 
         </div>
+             
+        
         <Footer/>
 
         
