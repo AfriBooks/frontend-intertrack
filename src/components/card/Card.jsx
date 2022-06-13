@@ -5,42 +5,49 @@ import "./Card.css"
 import { BsStar } from 'react-icons/bs';
 import {Link} from "react-router-dom"
 
+//import { addToCart } from '../../features/cart/cartSlice';
+
 
 
 
 export const Card = () => {
     const {items, status} = useSelector(state => state.products);
+
+
     
     
-    //const {data, error, isLoading} = useGetAllBooksQuery();
+//    const {data, error, isLoading} = useGetAllBooksQuery();
     console.log(items);
 
     const getBooks = items.map((product) => {
+        const {id, image, title, category, price} = product;
+        
           
         return (
 
             <div className="card--div-1">
+                
                         
-                <div key={product.id} className="product">
+                <div key={id} className="product">
                     
                     <div className="card--img--div">
-                        <img className='card--img' src= {product.book_image} alt='' />
+                    <Link to={`/product/${id}`}><img className='card--img' src= {image} alt='' /></Link>
                     </div>
 
-                    <div className="card--title--div">
-                        <span className='card--title'><strong></strong>{product.title}</span>
+                    <div className="card--title--div-home">
+                        <span className='card--title'><strong></strong>{title}</span>
                     </div>
                     
-                    <div className="card--author--div">
-                         <span className='card--name'>Author{product.category} </span>
+                    <div className="card--author--div-home">
+                         <span className='card--name'>Author{category} </span>
                     </div>
                        
-                    <div className='card-price-div'>  
-                        <span className='card--price'><span className='starting-at'>$</span> {product.price}</span>
+                    <div className='card-price-div-home'>  
+                        <span className='card--price'><span className='starting-at'>$</span> {price}</span>
                     </div>
                     
-                    <div className="card--star--div">
-                        <span className='star'><BsStar/><BsStar/><BsStar/><BsStar/> </span> 
+                    <div className="card--star--div-home">
+                        <span className='star'><BsStar className='home-card-star'/><BsStar className='home-card-star'/><BsStar className='home-card-star'/><BsStar className='home-card-star'/> </span> 
                         
                     </div>
             
@@ -54,14 +61,17 @@ export const Card = () => {
 
 return (
         <div className='card'>
-            {getBooks.length ? <Link to="/book-detail"><div className='card--section'>{getBooks}</div></Link> : "Loading..."}
+          
+            {getBooks.length ? <div className='card--section'>{getBooks}</div> : ""}
+            
         </div>  
     ) 
             
 }
 
 
-// {status.pending ? (<p>Loading...</p>) : status.rejected ? (<p>An error occured...</p>) : (
+// {getBooks.length ? <div className='card--section'>{getBooks}</div> : ""}
+//{status.pending ? (<p>Loading...</p>) : status.rejected ? (<p>An error occured...</p>) : (
                 
 //     <div className="card--div--2">
         

@@ -6,13 +6,15 @@ const initialState = {
   status: null
 }
 
+//https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=Ar9XW0pEbKOnZuxGkAZSbuANfU9jCzKH
+
 export const productsFetch = createAsyncThunk(
   
   "products/productsFetch",
 
    async() => {
-    const response = await axios.get("https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=Ar9XW0pEbKOnZuxGkAZSbuANfU9jCzKH")
-    return response?.data.results.books
+    const response = await axios.get("https://fakestoreapi.com/products")
+    return response?.data
    }
 );
 
