@@ -10,9 +10,13 @@ import { AiOutlineHome } from 'react-icons/ai';
 import { FiBookOpen } from 'react-icons/fi';
 import { MdOutlineLibraryBooks } from 'react-icons/md';
 import { BsBag } from 'react-icons/bs';
+import { useSelector } from 'react-redux';
 
 
 export const Header = () => {
+
+  const { cartTotalQuantity } = useSelector(state => state.cart)
+
   return (
     <div className='header'>
 
@@ -31,7 +35,7 @@ export const Header = () => {
           </div>
           <div className='header-nav-bar-1-c'>
             <div className='switch-to-author-div'><button className='switch-to-author-btn'>Switch to author</button></div>
-            <div className='cart-container-div'><div className='cart-div'><Link to="/delivery-info"><BsCart/></Link></div><div className='cart-item-num-div'>5</div></div>
+            <div className='cart-container-div'><div className='cart-div'><Link to="/delivery-info"><BsCart/></Link></div><div className='cart-item-num-div'>{cartTotalQuantity}</div></div>
             <div className='notification-div'><IoIosNotificationsOutline/></div>
             <div className='profle-div'>
                 <div className='avatar-div'><img className='avatar' src='https://thumbs.dreamstime.com/b/default-avatar-profile-vector-user-profile-default-avatar-profile-vector-user-profile-profile-179376714.jpg' alt='pic' /></div>
@@ -51,7 +55,7 @@ export const Header = () => {
                 <li className='header-list'><Link to="/"><AiOutlineHome/> Home </Link></li>
                 <li className='header-list'><Link to="/library"><FiBookOpen/> My Library </Link></li>
                 <li className='header-list'><Link to="/genre"><MdOutlineLibraryBooks/> Genre </Link></li>
-                <li className='header-list'><Link to="/delivery-info"><BsCart/> My order </Link></li>
+                <li className='header-list'><Link to="/delivery-info"><BsCart/> My order<div className='cart-qty-num-div'>{cartTotalQuantity}</div> </Link></li>
                 {/*<li className='header-list'><Link to="/register"> Register </Link></li>
                 <li className='header-list'><Link to="/sign-in-one"><MdOutlineLibraryBooks/> Sign In </Link></li>
                 <li className='header-list'><Link to="/desc-best"><BsBag/> Best </Link></li>

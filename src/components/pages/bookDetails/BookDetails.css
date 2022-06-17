@@ -116,6 +116,12 @@
     background-color: white;
     border-radius: 6px;
     margin-left: 20px;
+    cursor: pointer;
+    outline: none;
+}
+
+.add-to-cart-btn:hover {
+    color: aqua;
 }
 
 .summary-h4 {

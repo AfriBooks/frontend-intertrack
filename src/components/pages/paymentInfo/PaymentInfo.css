@@ -111,12 +111,12 @@
     height: auto;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     border-top: 1px solid gainsboro;
 }
 
 .deliveryInfo-div-2-left {
-    width: 37%;
+    width: 45%;
     height: 550px;
     display: flex;
     flex-direction: column;
@@ -194,7 +194,7 @@
 }
 
 .deliveryInfo-div-2-right {
-    width: 35%;
+    width: 45%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -220,7 +220,7 @@
 }
 
 .order-summary-div {
-    width: 65%;
+    width: 85%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -244,7 +244,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 10px;
+    border-bottom: 1px solid gainsboro;
+    margin-bottom: 15px;
 }
 
 .single-order-image-div {
@@ -316,4 +317,6 @@
     align-items: center;
     font-size: 1.4rem;
     border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+    margin-bottom: 15px;
 }

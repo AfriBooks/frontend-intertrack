@@ -11,6 +11,9 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux'
 import { addToCart } from '../../../features/cart/cartSlice';
 import { useHistory } from 'react-router-dom';
+import axios from 'axios';
+import { single, singleProductFetch } from '../../../features/product/singleProductSlice';
+import { useEffect } from 'react';
 
 
 
@@ -30,6 +33,26 @@ export const BookDetails = () => {
    
 const { id } = useParams();
 console.log(id);
+
+const fetchProductDetails = async () => {
+
+    const response = await axios.get(`https://fakestoreapi.com/products/${id}`)
+    
+    .catch((err) => {
+        console.log("error ", err)
+        
+
+    });
+
+    dispatch(single(response.data))
+
+};
+
+
+useEffect(() => {
+    if (id && id !== "") fetchProductDetails();
+    
+}, [id]);
 
   return (
     <div className='bookDetails'>

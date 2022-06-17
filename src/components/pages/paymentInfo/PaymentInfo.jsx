@@ -2,9 +2,37 @@ import React from 'react'
 import "./PaymentInfo.css"
 import {Link} from "react-router-dom"
 import { AiOutlineStar } from 'react-icons/ai';
+import { MdKeyboardBackspace } from 'react-icons/md';
 import { IoMdCheckmark } from 'react-icons/io';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { addToCart, clearCart, decreaseCart, getTotals, removeFromCart } from '../../../features/cart/cartSlice';
 
 export const PaymentInfo = () => {
+    const cart = useSelector((state) => state.cart);
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(getTotals ())
+   }, [cart, dispatch])
+
+   const handleRemoveFromCart = (cartItem) => {
+        dispatch(removeFromCart (cartItem))
+   }
+
+   const handleDecreaseCart = (cartItem) => {
+        dispatch(decreaseCart (cartItem))
+   }
+
+   const handleIncreaseCart = (cartItem) => {
+    dispatch(addToCart (cartItem))
+   }
+
+   const handleClearCart = () => {
+    dispatch(clearCart ())
+   }
+
+
   return (
     <div className='paymentInfo'>
 
@@ -88,7 +116,7 @@ export const PaymentInfo = () => {
                                 
                                 </div>
 
-                                <button className='pay-amount-btn'><Link to="/order-success">Pay N 18,000</Link></button>
+                                <button className='pay-amount-btn'><Link to="/order-success">Pay N {cart.cartTotalAmount}</Link></button>
 
                             </form>
 
@@ -100,58 +128,68 @@ export const PaymentInfo = () => {
                             <div className='deliveryInfo-div-2-right-sub-sub'>
                                 <div className='order-summary-div'>
                                     <div className='order-summary'>Order Summary</div>
-                                    <div className='single-order-div'>
-                                        <div className='single-order-image-div'>
-                                            <img className='single-order-image' src='https://africanbookaddict.files.wordpress.com/2018/12/wrbg.jpg' alt='' />
 
-                                        </div>
-                                        <div className='single-order-title-div'>
-                                            <h4>Book title</h4>
-                                            <p>Book author</p>
-                                            <div className='deliv-rating'><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/></div>
-                                            <p>N 9,000</p>
-
-                                        </div>
-                                        <div className='single-order-count-div'>
-                                            <div className='single-order-count-div-sub'>
-                                                <button className='add-btn'>+</button>
-                                                <p className='qty'>1</p>
-                                                <button className='minus-btn'>-</button>
-
+                                    {cart.cartItems.length === 0 ? (
+                                        <div className='empty-cart-div'>
+                                            <p>Your cart is currently empty</p>
+                                            <div className='start-shopping-div'>
+                                                <Link to="/"><MdKeyboardBackspace/> <span>Start Shopping</span></Link>
                                             </div>
-
                                         </div>
 
-                                    </div>
-                                    <div className='single-order-div'>
-                                        <div className='single-order-image-div'>
-                                            <img className='single-order-image' src='https://africanbookaddict.files.wordpress.com/2018/12/wrbg.jpg' alt='' />
-
+                                    ) :
+                                    (
+                                        <div className='cart-items'>
+                                            {cart.cartItems?.map(cartItem => (
+                                                <div className='cart-item' key = {cartItem.id}>
+            
+                                                    <div className='single-order-div'>
+                                                        <div className='single-order-image-div'>
+                                                            <img className='single-order-image' src= {cartItem.image} alt='' />
+            
+                                                        </div>
+                                                        <div className='single-order-title-div'>
+                                                            <h4>{cartItem.title}</h4>
+                                                            <p>{cartItem.category}</p>
+                                                            <div className='deliv-rating'><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/></div>
+                                                            <p>N {cartItem.price}</p>
+                                                            <button className='remove-btn-cart' onClick={() => handleRemoveFromCart(cartItem)}>Remove</button>
+            
+                                                        </div>
+                                                        <div className='single-order-count-div'>
+                                                            <div className='single-order-count-div-sub'>
+                                                                <button className='add-btn' onClick={() => handleIncreaseCart(cartItem)}>+</button>
+                                                                <p className='qty'>{cartItem.cartQuantity}</p>
+                                                                <button className='minus-btn' onClick={() => handleDecreaseCart(cartItem)}>-</button>
+            
+                                                            </div>
+            
+                                                        </div>
+                                                        <div className='sub-total-div'>
+                                                            <h5 className='sub-total-h5'>Sub total</h5>
+                                                            <div className='sub-total'>{cartItem.price * cartItem.cartQuantity}</div>
+            
+                                                        </div>
+            
+                                                    </div>
+                                                
+                                                    
+                                                    
+            
+                                                </div>
+                                            ))}
+                                                <div className='total-div'>
+                                                        <h4>Total</h4>
+                                                        <h4>N {cart.cartTotalAmount}</h4>
+            
+                                                </div>
+            
+                                                <button className='clear-cart-btn' onClick={() => handleClearCart()}>Clear cart</button>
+                                              <div><Link to = "/"> Continue shopping</Link></div>
                                         </div>
-                                        <div className='single-order-title-div'>
-                                            <h4>Book title</h4>
-                                            <p>Book author</p>
-                                            <div className='deliv-rating'><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/></div>
-                                            <p>N 9,000</p>
-
-                                        </div>
-                                        <div className='single-order-count-div'>
-                                            <div className='single-order-count-div-sub'>
-                                                <button className='add-btn'>+</button>
-                                                <p className='qty'>1</p>
-                                                <button className='minus-btn'>-</button>
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                
+                                        )}
+                                        
                                     
-                                    <div className='total-div'>
-                                        <h4>Total</h4>
-                                        <h4>N 18,000</h4>
-
-                                    </div>
 
                                 </div>
                                 
@@ -167,3 +205,35 @@ export const PaymentInfo = () => {
     </div>
   )
 }
+
+/* <div className='single-order-div'>
+    <div className='single-order-image-div'>
+        <img className='single-order-image' src='https://africanbookaddict.files.wordpress.com/2018/12/wrbg.jpg' alt='' />
+
+    </div>
+    <div className='single-order-title-div'>
+        <h4>Book title</h4>
+        <p>Book author</p>
+        <div className='deliv-rating'><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/></div>
+        <p>N 9,000</p>
+
+    </div>
+    <div className='single-order-count-div'>
+        <div className='single-order-count-div-sub'>
+            <button className='add-btn'>+</button>
+            <p className='qty'>1</p>
+            <button className='minus-btn'>-</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<div className='total-div'>
+    <h4>Total</h4>
+    <h4>N 18,000</h4>
+
+</div> */

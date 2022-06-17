@@ -104,17 +104,17 @@
     border: 1px solid gainsboro;
 }
 
-.deliveryInfo-div-2 {
+.deliveryInfo-div-2-cart {
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     border-top: 1px solid gainsboro;
 }
 
-.deliveryInfo-div-2-left {
-    width: 37%;
+.deliveryInfo-div-2-left-cart {
+    width: 45%;
     height: 550px;
     display: flex;
     flex-direction: column;
@@ -172,15 +172,15 @@
     border: none;
 }
 
-.deliveryInfo-div-2-right {
-    width: 35%;
+.deliveryInfo-div-2-right-cart {
+    width: 45%;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: start;
 }
 
-.deliveryInfo-div-2-right-sub {
+.deliveryInfo-div-2-right-sub-cart {
     width: 100%;
     height: 100%;
     display: flex;
@@ -189,8 +189,8 @@
     align-items: center;
 }
 
-.deliveryInfo-div-2-right-sub-sub {
-    width: 90%;
+.deliveryInfo-div-2-right-sub-sub-cart {
+    width: 100%;
     height: 80%;
     display: flex;
     flex-direction: column;
@@ -198,15 +198,15 @@
     align-items: center;
 }
 
-.order-summary-div {
-    width: 65%;
+.order-summary-div-cart {
+    width: 80%;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     padding: 27px;
     border-radius: 8px;
-    background-color: white;
+    background-color: #ffffff;
 }
 
 .order-summary {
@@ -217,7 +217,7 @@
     justify-content: start;
 }
 
-.single-order-div {
+.single-order-div-cart {
     width: 100%;
     height: 90px;
     display: flex;
@@ -240,7 +240,7 @@
     height: 100%;
 }
 
-.single-order-title-div {
+.single-order-title-div-cart {
     width: 40%;
     height: 80%;
     display: flex;
@@ -249,8 +249,16 @@
     font-size: 1.2rem;
 }
 
-.single-order-count-div {
-    width: 20%;
+.remove-btn-cart {
+    width: 60%;
+}
+
+.remove-btn-cart:hover {
+    color: red;
+}
+
+.single-order-count-div-cart {
+    width: 15%;
     height: 80%;
     display: flex;
     flex-direction: column;
@@ -284,6 +292,14 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+.sub-total-div-cart {
+    width: 20%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .total-div {
