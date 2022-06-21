@@ -1,4 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
+import authReducer from '../auth/authSlice';
+import buyerAddressReducer from '../auth/buyerAddressSlice';
+import signInReducer from '../auth/signInSlice';
 import cartReducer, { getTotals } from '../cart/cartSlice';
 import productReducer, { productsFetch } from '../product/productSlice'; 
 import singleProductReducer, { singleProductFetch } from '../product/singleProductSlice';
@@ -12,6 +15,9 @@ const store = configureStore({
       products: productReducer,
       singleProduct: singleProductReducer,
       cart: cartReducer,
+      auth: authReducer,
+      signInSlice: signInReducer,
+      buyerAddress: buyerAddressReducer,
 
       [productApi.reducerPath]: productApi.reducer,
       

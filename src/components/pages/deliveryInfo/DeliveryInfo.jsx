@@ -5,17 +5,43 @@ import { AiOutlineStar } from 'react-icons/ai';
 import { MdKeyboardBackspace } from 'react-icons/md';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart, clearCart, decreaseCart, getTotals, removeFromCart } from '../../../features/cart/cartSlice';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 export const DeliveryInfo = () => {
 
+    const [ buyer, setBuyer ] = useState({
+        name: "",
+        phone: 0,
+        address: "",
+    })
+    console.log(buyer)
+
+    const submitBuyerAddress = (e) => {
+        e.preventDefault()
+
+        
+    }
+
    const cart = useSelector((state) => state.cart);
+
+   const auth = useSelector(state => state.auth);
 
    const dispatch = useDispatch()
 
    useEffect(() => {
         dispatch(getTotals())
    }, [cart, dispatch])
+
+//    const history = useHistory();
+
+//    const goSignIn = () => {
+//     history.push("/")
+//    }
+
+//    useEffect(() => {
+    
+//    })
 
    const handleRemoveFromCart = (cartItem) => {
         dispatch(removeFromCart(cartItem))
@@ -87,25 +113,28 @@ export const DeliveryInfo = () => {
                     </div>
                     <div className='delivery-Info-para'></div>
 
-                    <form className='delivery-info-form' action="#" id="delivery-info-form" name="delivery-info-form">
+                    <form className='delivery-info-form' onSubmit={submitBuyerAddress} id="delivery-info-form" name="delivery-info-form">
                         
                         <div className='delivery-input-div'>
                             <label id="delivery-name-label">Full Name</label><br/>
-                            <input className='delivery-input' id="name" type="text" name="name" required placeholder="Enter your name"/><br/>
+                            <input className='delivery-input' id="name" type="text" name="name" required placeholder="Enter your name"
+                            onChange={(e) => setBuyer({...buyer, name: e.target.value})} /><br/>
                         </div>
                         
                         <div className='delivery-input-div'>
                             <label className='delivery-phone-num-label' id="delivery-phone-num">Phone number</label><br/>
-                            <input className='delivery-input' id="phone" type="phone" name="phone" required placeholder="Enter your phone number"/><br/>
+                            <input className='delivery-input' id="phone" type="phone" name="phone" required placeholder="Enter your phone number" 
+                           onChange={(e) => setBuyer({...buyer, phone: e.target.value})} /><br/>
                         </div>
 
                         <div className='textarea-div'>
                         <label className='delivery-textarea-label' for="delivery-textarea">Delivery address</label><br/>
-                        <textarea className='delivery-address-textarea' id="delivery-textarea" name="delivery-textarea" placeholder="Enter your delivery address" /><br/>
+                        <textarea className='delivery-address-textarea' id="delivery-textarea" name="delivery-textarea" placeholder="Enter your delivery address" 
+                        onChange={(e) => setBuyer({...buyer, address: e.target.value})}/><br/>
                         
                         </div>
 
-                        <button className='Continue-to-payment-btn'><Link to="/payment-info">Continue to payment Info</Link></button>
+                        <button className='Continue-to-payment-btn'><Link to="/sign-in-two"> Sign in to pay </Link></button>
 
                     </form>
 

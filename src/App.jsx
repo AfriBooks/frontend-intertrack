@@ -31,7 +31,7 @@ function App() {
         <Router>
             <Switch>
               
-                <Route exact path= "/"> <Home/> </Route>
+            <Route exact path= "/"> <Home/> </Route>
                 <Route exact path= "/register"> <CreateAccount/> </Route>
                 <Route exact path= "/register-form"> <CreateAccountForm/> </Route>
                 <Route exact path= "/verify-email"> <VerifyEmail/> </Route>

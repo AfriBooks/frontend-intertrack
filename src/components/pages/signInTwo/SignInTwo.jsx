@@ -1,9 +1,31 @@
 import React from 'react'
 import "./SignInTwo.css"
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import {Link} from "react-router-dom"
+import { useState } from 'react'
+import { logInUser } from '../../../features/auth/signInSlice'
+
 
 export const SignInTwo = () => {
+
+    const [ signIn, setsignIn ] = useState({
+        email: "",
+        password: "",
+    })
+    console.log("user:", signIn)
+
+    const dispatch = useDispatch();
+
+    const authSignIn = useSelector(state => state.authSignIn);
+
+    console.log(authSignIn)
+
+
+    const handleSignIn = (e) => {
+        e.preventDefault()
+
+        dispatch(logInUser(signIn))
+    }
 
     const {items, status} = useSelector(state => state.products);
   
@@ -46,33 +68,18 @@ export const SignInTwo = () => {
                     
                     <div class="form-two-container">
 
-                        <form className='signin-two-form' action="#" id="signin-two-form" name="signin-two-form">
-                            
-                            <div className='input-two-div'>
-                                <label className='email-label' id="email-label">Email</label><br/>
-                                <input className='input-signin-two' id="email" type="email" name="email" required placeholder="Enter your email address"/><br/>
-                            </div>
+                    <form onSubmit={handleSignIn}>
+                        
+                        <input type ="email" placeholder='email' onChange={(e) =>  setsignIn({...signIn, email: e.target.value})} />
+                        <input type ="password" placeholder='password' onChange={(e) =>  setsignIn({...signIn, password: e.target.value})} /><br/>
+                        <button>Sign in</button>
 
-                            <div className='input-two-div'>
-                                <label className='password-label' id="password-label">Password</label><br/>
-                                <input className='input-signin-two' id="password" type="password" name="password" required placeholder="Enter your password"/><br/>
-                            </div>
-
-                            <div className='checkbox-two-div-1'>
-                                <div className='checkbox-two-div-2'>
-                                    <input className='checkbox-two' type="checkbox" id="remember-me" name="" value="" />
-                                    <label for="checkbox-two">Remember me</label>
-                                </div>
-                                <p className='forgot-password'><Link to="/password-reset"> Forgot password? </Link></p>
-                            </div>
-
-                            <button className='sign-up-two-btn'>Sign in</button>
-
-                        </form>
+                   
+                    </form>
 
                     </div>
                     
-                    <p className='create-account-para-two-2'>Don't have an account? Sign up</p>
+                    <p className='create-account-para-two-2'>Don't have an account?<Link to="/register-form"> Sign up </Link></p>
 
                 </div>
             </div>
@@ -89,3 +96,29 @@ export const SignInTwo = () => {
     </div>
   )
 }
+
+/* <form className='signin-two-form' onChange={handleSignIn} id="signin-two-form" name="signin-two-form">
+                            
+<div className='input-two-div'>
+    <label className='email-label' id="email-label">Email</label><br/>
+    <input className='input-signin-two' id="email" type="email" name="email" required placeholder="Enter your email address" 
+    onChange={(e) => setsignIn({...signIn, email: e.target.value})} /><br/>
+</div>
+
+<div className='input-two-div'>
+    <label className='password-label' id="password-label">Password</label><br/>
+    <input className='input-signin-two' id="password" type="password" name="password" required placeholder="Enter your password" 
+     onChange={(e) => setsignIn({...signIn, password: e.target.value})} /><br/>
+</div>
+
+<div className='checkbox-two-div-1'>
+    <div className='checkbox-two-div-2'>
+        <input className='checkbox-two' type="checkbox" id="remember-me" name="" value="" />
+        <label for="checkbox-two">Remember me</label>
+    </div>
+    <p className='forgot-password'><Link to="/password-reset"> Forgot password? </Link></p>
+</div>
+
+<button className='sign-up-two-btn'>Sign in</button>
+
+</form> */

@@ -1,9 +1,11 @@
-
-import { useSelector } from 'react-redux'
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux'
 //import { useGetAllBooksQuery } from '../../features/productApi/productApi'
 import "./Card.css"
 import { BsStar } from 'react-icons/bs';
 import {Link} from "react-router-dom"
+import axios from 'axios';
+
 
 //import { addToCart } from '../../features/cart/cartSlice';
 
@@ -12,12 +14,12 @@ import {Link} from "react-router-dom"
 
 export const Card = () => {
     const {items, status} = useSelector(state => state.products);
-
-
     
     
 //    const {data, error, isLoading} = useGetAllBooksQuery();
     console.log(items);
+
+   
 
     const getBooks = items.map((product) => {
         const {id, image, title, category, price} = product;
@@ -35,11 +37,11 @@ export const Card = () => {
                     </div>
 
                     <div className="card--title--div-home">
-                        <span className='card--title'><strong></strong>{title}</span>
+                        <span className='card--title'><strong>{title}</strong></span>
                     </div>
                     
                     <div className="card--author--div-home">
-                         <span className='card--name'>Author{category} </span>
+                         <span className='card--name'>Author {category}</span>
                     </div>
                        
                     <div className='card-price-div-home'>  
@@ -62,12 +64,13 @@ export const Card = () => {
 return (
         <div className='card'>
           
-            {getBooks.length ? <div className='card--section'>{getBooks}</div> : ""}
+          {getBooks.length ? <div className='card--section'>{getBooks}</div> : ""}
             
         </div>  
     ) 
             
 }
+
 
 
 // {getBooks.length ? <div className='card--section'>{getBooks}</div> : ""}
