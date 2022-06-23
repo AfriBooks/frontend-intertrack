@@ -36,21 +36,22 @@ console.log(id);
 
 const fetchProductDetails = async () => {
 
-    const response = await axios.get(`https://fakestoreapi.com/products/${id}`)
+    const response = await axios.get(`https://afribook.herokuapp.com/books/${id}`)
+    
     
     .catch((err) => {
         console.log("error ", err)
         
 
     });
-
+    
     dispatch(single(response.data))
 
 };
 
 
 useEffect(() => {
-    if (id && id !== "") fetchProductDetails();
+    fetchProductDetails();
     
 }, [id]);
 
@@ -63,7 +64,7 @@ useEffect(() => {
             <div className='bookDetails-div-left'>
                     <div className='bookDetails-div-left-subdiv'>
                          <div className='bookDetails-div-left-subdiv-image-div'>
-                             <img className='subdiv-image-div-image' src={singleItem.image} alt=''/>
+                             <img className='subdiv-image-div-image' src="https://africanbookaddict.files.wordpress.com/2018/12/wrbg.jpg" alt=''/>
 
                          </div>
                     </div>
@@ -71,7 +72,7 @@ useEffect(() => {
             <div className='bookDetails-div-right'>
                 <div className='title-book-div'>
                     <h3 className='title-book'>{singleItem.title}</h3>
-                    <p className='author-name'>{singleItem.category}</p>
+                    <p className='author-name'>{singleItem.author}</p>
                     <p className='paper-book'><strong>Paperback: N{singleItem.price}</strong></p>
                     <p className='e-book'><strong> Ebook: N1500</strong></p>
                     <div className='rating-div'><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/></div>

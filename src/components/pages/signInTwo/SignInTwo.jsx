@@ -28,17 +28,19 @@ export const SignInTwo = () => {
     }
 
     const {items, status} = useSelector(state => state.products);
+    console.log(items)
   
-    const getProducts = items.map((product) => {
+    const getProducts = items.map(product => {
+       
             
       return (
   
           <div className="register-card--div">
                       
-              <div key={product.id} className="product">
+              <div key={product._id} className="product">
                   
                   <div className="card--img--div">
-                      <img className='card--img' src= {product.book_image} alt='' />
+                      <img className='card--img' src= "https://brittlepaper.com/wp-content/uploads/2021/06/zainab-takes-new-york.jpeg" alt='' />
                   </div>
                   
   
@@ -58,7 +60,7 @@ export const SignInTwo = () => {
         <div className='create-account-div-left'>
 
             <div className='signin-two-bar'>
-               <div className='signinTwo-afribook'> <h3>AfriBook</h3></div>
+               <div className='signinTwo-afribook'> <h3><Link to="/"> AfriBook</Link></h3></div>
             
             </div>
 

@@ -163,12 +163,12 @@ export const DeliveryInfo = () => {
 
                                         <div className='single-order-div-cart'>
                                             <div className='single-order-image-div'>
-                                                <img className='single-order-image' src= {cartItem.image} alt='' />
+                                                <img className='single-order-image' src= "https://africanbookaddict.files.wordpress.com/2018/12/wrbg.jpg" alt='' />
 
                                             </div>
                                             <div className='single-order-title-div-cart'>
                                                 <h4>{cartItem.title}</h4>
-                                                <p>{cartItem.category}</p>
+                                                <p>{cartItem.author}</p>
                                                 <div className='deliv-rating'><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/></div>
                                                 <p>N {cartItem.price}</p>
                                                 <button className='remove-btn-cart' onClick={() => handleRemoveFromCart(cartItem)}>Remove</button>

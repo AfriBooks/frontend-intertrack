@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
 //import { useGetAllBooksQuery } from '../../features/productApi/productApi'
 import "./Card.css"
@@ -10,19 +10,46 @@ import axios from 'axios';
 //import { addToCart } from '../../features/cart/cartSlice';
 
 
-
-
 export const Card = () => {
-    const {items, status} = useSelector(state => state.products);
+
+    const [displayCards, setDisplayCards] = useState([]);
+const [isloading, setIsLoading] = useState([])
+
+const getDisplayCard = async () => {
+    setIsLoading(true);
+  const response = await axios.get(
+    "https://afribook.herokuapp.com/books"
     
+    )
+  .catch((err) => {
+      console.log(err)
+  })
+  if(response) {
+    setIsLoading(false)
+    console.log(response.data.books)
+    setDisplayCards(response.data.books)
+  }
+}
+
+useEffect(() => {
+   getDisplayCard()
+}, []);
+
+/*const someCards = displayCards.filter(function(a) {
+      if (a.id < 7) {
+        return a 
+      }
+                   
+})*/
+
+//    const { items, status } = useSelector(state => state.products);
+
+//    console.log(items);
     
 //    const {data, error, isLoading} = useGetAllBooksQuery();
-    console.log(items);
-
-   
-
-    const getBooks = items.map((product) => {
-        const {id, image, title, category, price} = product;
+    
+const getBooks = displayCards.map(product => {
+        const {_id, cover, title, author, price} = product;
         
           
         return (
@@ -30,10 +57,10 @@ export const Card = () => {
             <div className="card--div-1">
                 
                         
-                <div key={id} className="product">
+                <div key={_id} className="product">
                     
                     <div className="card--img--div">
-                    <Link to={`/product/${id}`}><img className='card--img' src= {image} alt='' /></Link>
+                    <Link to={`/books/${_id}`}><img className='card--img' src= "https://africanbookaddict.files.wordpress.com/2018/12/wrbg.jpg" alt='' /></Link>
                     </div>
 
                     <div className="card--title--div-home">
@@ -41,7 +68,7 @@ export const Card = () => {
                     </div>
                     
                     <div className="card--author--div-home">
-                         <span className='card--name'>Author {category}</span>
+                         <span className='card--name'> {author}</span>
                     </div>
                        
                     <div className='card-price-div-home'>  
@@ -63,9 +90,8 @@ export const Card = () => {
 
 return (
         <div className='card'>
-          
-          {getBooks.length ? <div className='card--section'>{getBooks}</div> : ""}
-            
+            {isloading && <p>Loading...</p>}
+            {getBooks.length ? <div className='card--section'>{getBooks}</div> : ""}
         </div>  
     ) 
             

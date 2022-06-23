@@ -15,9 +15,9 @@ export const productsFetch = createAsyncThunk(
     "products/productsFetch",
   
      async() => {
-      const response = await axios.get("https://fakestoreapi.com/products")
+      const response = await axios.get("https://afribook.herokuapp.com/books")
       console.log(response.data);
-      return response?.data
+      return response.data.books;
      }
   );
 

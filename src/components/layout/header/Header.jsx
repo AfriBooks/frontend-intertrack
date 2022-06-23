@@ -73,7 +73,9 @@ export const Header = () => {
 
           <div>
 
-            {auth._id ? <div>Logout</div> : <div className='header-login-div'><div>Login</div><div className='header-reg'>Register</div></div>}
+            {auth._id ? <div>Logout</div> 
+            : <div className='header-login-div'><div><Link to="/sign-in-two"> Login</Link></div>
+            <div className='header-reg'><Link to="/register-form"> Register</Link></div></div>}
 
           </div>
 

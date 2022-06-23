@@ -29,7 +29,7 @@ export const registerUser = createAsyncThunk (
             console.log(token)
 
             if (token) {
-                window.location.pathname = "/payment-info";
+                window.location.pathname = "/";
             }
             const [data] = token;
             if (data.status === "200") {

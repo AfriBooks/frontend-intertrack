@@ -27,7 +27,7 @@ export const logInUser = createAsyncThunk (
             console.log(tok)
 
             if (tok) {
-                window.location.pathname = "/payment-info";
+                window.location.pathname = "/";
             }
             const [data] = tok;
             if (data.status === "200") {

@@ -43,7 +43,7 @@ function App() {
                 <Route exact path= "/fav-genre"> <FavoriteGenre/> </Route>
                 <Route exact path= "/fav-genre-two"> <FavGenreTwo/> </Route>
                 <Route exact path= "/fav-genre-three"> <FavGenreThree/> </Route>
-                <Route exact path= "/product/:id"> <BookDetails/> </Route>
+                <Route exact path= "/books/:id"> <BookDetails/> </Route>
                 <Route exact path= "/popular-now"> <PopularNow/> </Route>
                 <Route exact path= "/best-seller"> <BestSellerBook/> </Route>
                 <Route exact path= "/new-added"> <NewAdded/> </Route>

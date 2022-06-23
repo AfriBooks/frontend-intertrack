@@ -26,7 +26,7 @@ export const Home = () => {
             <div key={productItem.id} className="productItem">
                 
                 <div className="card-two--img--div">
-                <Link to={`/product/${productItem.id}`}><img className='card-two--img' src= {productItem.image} alt='' /></Link>
+                <Link to={`/product/${productItem.id}`}><img className='card-two--img' src= "https://africanbookaddict.files.wordpress.com/2017/12/img_0945.jpg" alt='' /></Link>
                 </div>
                 
                 <div className='card-two--title--div'>
@@ -35,7 +35,7 @@ export const Home = () => {
                     </div>
                     
                     <div className="card-two--author--div">
-                        <span className='card--name'>Author{productItem.category} </span>
+                        <span className='card--name'>{productItem.author} </span>
                     </div>
                       
                    {/* <div className='card-two-price-div'>  
@@ -75,8 +75,11 @@ export const Home = () => {
 // })
 
   return (
-    <div className='home'>
-      <Header/>
+      <div className='home'>
+      
+          <Header/>
+    
+
      
       <div className='advert-banner'>
           
@@ -125,17 +128,21 @@ export const Home = () => {
 
       <div className='home-card-two-container'>
           <div className='home-card-two-div-a'>
+
           {getBooksTwo.length ? <div className='card-two--section'>{getBooksTwo}</div> : "Loading..."}
 
           </div>
-          <div className='home-card-two-div-b'>
-          {getBooksTwo.length ? <div className='card-two--section'>{getBooksTwo}</div> : "Loading..."}
+          
+           <div className='home-card-two-div-b'>
+           {getBooksTwo.length ? <div className='card-two--section'>{getBooksTwo}</div> : "Loading..."}
 
-          </div>
+           </div>
           <div className='home-card-two-div-c'>
-          {getBooksTwo.length ? <div className='card-two--section'>{getBooksTwo}</div> : "Loading..."}
+           {getBooksTwo.length ? <div className='card-two--section'>{getBooksTwo}</div> : "Loading..."}
 
-          </div>
+          </div>  
+          
+          
 
       </div>
 
@@ -143,5 +150,7 @@ export const Home = () => {
     </div>
   )
 }
+
+ 
 
 
