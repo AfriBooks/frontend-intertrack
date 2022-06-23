@@ -46,12 +46,12 @@ export const CreateAccountForm = () => {
             
       return (
   
-          <div className="register-card--div">
+          <div className="register-card--div-two">
                       
-              <div key={product._id} className="product">
+              <div key={product._id} className="createAccountForm-card-product-div-two">
                   
-                  <div className="card--img--div">
-                      <img className='card--img' src= "https://brittlepaper.com/wp-content/uploads/2021/06/81b6ahl1uL.jpeg" alt='' />
+                  <div className="createAccountForm-card--img--div">
+                      <img className='createAccountForm-card--img' src= "https://brittlepaper.com/wp-content/uploads/2021/06/81b6ahl1uL.jpeg" alt='' />
                   </div>
                   
   
@@ -64,31 +64,37 @@ export const CreateAccountForm = () => {
 
   return (
       
-    <div className='createAccountForm'>
+    <div className='createAccountForm-two'>
 
     
 
-    <div className='createAccountForm-main-div'>
+    <div className='createAccountForm-main-div-two'>
 
-    <div className='createAccountForm-div-left'>
+    <div className='createAccountForm-div-left-two'>
     
-        <div className='createAccountForm-bar'>
-            <h3><Link to="/"> AfriBook</Link></h3>
+        <div className='createAccountForm-bar-two'>
+            <h3><Link to="/home"> AfriBook</Link></h3>
         </div>
 
-        <div className='createAccountForm-div'>
-            <div className='createAccountForm-div-inner'>
-                <div className='createAccountForm-h3-div'>
-                    <h3 className='createAccountForm-h3'>Create account</h3>
-                    <p className='createAccountForm-para-1'>Fill in the form below to create an account</p>
+        <div className='createAccountForm-div-two'>
+            <div className='createAccountForm-div-inner-two'>
+                <div className='createAccountForm-h3-div-two'>
+                    <h3 className='createAccountForm-h3-two'>Create account</h3>
+                    <p className='createAccountForm-para-1-two'>Fill in the form below to create an account</p>
                 </div>
                 
                 
-                <form onSubmit={handleSubmit}>
-                    <input type ="text" placeholder='name' onChange={(e) => setUser({...user, name: e.target.value})}/>
-                    <input type ="email" placeholder='email' onChange={(e) => setUser({...user, email: e.target.value})} />
-                    <input type ="password" placeholder='password' onChange={(e) => setUser({...user, password: e.target.value})} /><br/>
-                    <button>Sign up</button>
+                <form onSubmit={handleSubmit} className="createAccountForm-form-two">
+                    <label id="createAccountForm-name-label-two">Name</label><br />
+                    <input className='createAccountForm-input-two' type ="text" placeholder='name' onChange={(e) => setUser({...user, name: e.target.value})}/>
+
+                    <label className='createAccountForm-email-label-two' id="email-label">Email address</label><br />
+                    <input className='createAccountForm-input-two' type ="email" placeholder='email' onChange={(e) => setUser({...user, email: e.target.value})} />
+
+                    <label className='createAccountForm-password-label-two' id="password-label">Password</label><br/>
+                    <input className='createAccountForm-input-two' type ="password" placeholder='password' onChange={(e) => setUser({...user, password: e.target.value})} /><br/>
+
+                    <button className='createAccountForm-sign-up-btn-two'>Sign up</button>
 
                    
                 </form>
@@ -96,15 +102,15 @@ export const CreateAccountForm = () => {
 
                    
 
-                    <p className='createAccountForm-para-2'>Already have an account?<Link to="/sign-in-two"> Login </Link></p>
+                    <p className='createAccountForm-para-2-two'>Already have an account?<Link to="/sign-in-two"> Login </Link></p>
 
             </div>
         </div>
     </div>
 
-    <div className='createAccountForm-div-right'>
-        <div className='createAccountForm-card'>
-        {getProducts.length ? <div className='register-card-section'>{getProducts}</div> : ""}
+    <div className='createAccountForm-div-right-two'>
+        <div className='createAccountForm-card-div-two'>
+        {getProducts.length ? <div className='register-card-section-two'>{getProducts}</div> : ""}
         </div>
     </div>
 

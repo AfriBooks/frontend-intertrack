@@ -35,12 +35,12 @@ export const SignInTwo = () => {
             
       return (
   
-          <div className="register-card--div">
+          <div className="sign-in-card--div">
                       
-              <div key={product._id} className="product">
+              <div key={product._id} className="sign-in-product">
                   
-                  <div className="card--img--div">
-                      <img className='card--img' src= "https://brittlepaper.com/wp-content/uploads/2021/06/zainab-takes-new-york.jpeg" alt='' />
+                  <div className="sign-in-card--img--div">
+                      <img className='sign-in-card--img' src= "https://brittlepaper.com/wp-content/uploads/2021/06/zainab-takes-new-york.jpeg" alt='' />
                   </div>
                   
   
@@ -55,12 +55,12 @@ export const SignInTwo = () => {
 
         
 
-        <div className='create-account-div'>
+        <div className='sign-in-account-main-div-two'>
 
-        <div className='create-account-div-left'>
+        <div className='sign-in-account-div-left-two'>
 
             <div className='signin-two-bar'>
-               <div className='signinTwo-afribook'> <h3><Link to="/"> AfriBook</Link></h3></div>
+               <div className='signinTwo-afribook'> <h3><Link to="/home"> AfriBook</Link></h3></div>
             
             </div>
 
@@ -68,28 +68,37 @@ export const SignInTwo = () => {
                 <div className='signin-two-form-div-inner'>
                     <div className='signin-two-h3-div'><h3 className='signin-two-h3'>Wellcome back</h3></div>
                     
-                    <div class="form-two-container">
+        
 
-                    <form onSubmit={handleSignIn}>
-                        
-                        <input type ="email" placeholder='email' onChange={(e) =>  setsignIn({...signIn, email: e.target.value})} />
-                        <input type ="password" placeholder='password' onChange={(e) =>  setsignIn({...signIn, password: e.target.value})} /><br/>
-                        <button>Sign in</button>
+                    <form onSubmit={handleSignIn} className="signin-two-form">
+                        <label id="sign-in-two-name-label">Name</label><br />
+                        <input className='input-signin-two' type ="email" placeholder='email' onChange={(e) =>  setsignIn({...signIn, email: e.target.value})} />
+
+                        <label className='signi-in-two-name-label' id="password-label">Password</label><br/>
+                        <input className='input-signin-two' type ="password" placeholder='password' onChange={(e) =>  setsignIn({...signIn, password: e.target.value})} /><br/>
+
+                        <div className='checkbox-two-div-1'>
+                        <div className='checkbox-two-div-2'>
+                            <input className='checkbox-two' type="checkbox" id="remember-me" name="" value="" />
+                            <label for="checkbox-two">Remember me</label>
+                        </div>
+                        <p className='forgot-password'><Link to="/password-reset"> Forgot password? </Link></p>
+                        </div>
+
+                        <button className='sign-up-two-btn'>Sign in</button>
 
                    
                     </form>
-
-                    </div>
                     
-                    <p className='create-account-para-two-2'>Don't have an account?<Link to="/register-form"> Sign up </Link></p>
+                    <p className='sign-in-account-para-two-2'>Don't have an account?<Link to="/"> Sign up </Link></p>
 
                 </div>
             </div>
         </div>
 
-        <div className='create-account-div-right'>
-            <div className='create-account-card'>
-            {getProducts.length ? <div className='register-card-section'>{getProducts}</div> : ""}
+        <div className='sign-in-account-div-right-two'>
+            <div className='sign-in-account-card'>
+            {getProducts.length ? <div className='sign-in-card-section'>{getProducts}</div> : ""}
             </div>
         </div>
 

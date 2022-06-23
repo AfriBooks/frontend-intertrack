@@ -1,144 +1,176 @@
 .signInTwo {
     width: 100%;
-    height: 100vh;
-    background-color: #fbfbfb;
+    height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
 }
 
-.create-account-div {
+.sign-in-account-main-div-two {
     width: 90%;
-    height: 90%;
+    height: auto;
     background-color: #ffffff;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
 }
 
-.create-account-div-left {
-    width: 45%;
-    height: 90%;
+.sign-in-account-div-left-two {
+    width: 48%;
+    height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
 }
 
-.create-account-div-right {
-    width: 45%;
+.sign-in-account-div-right-two {
+    width: 50%;
     height: 95%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    overflow: hidden;
+    background-color: #fbfbfb;
 }
 
 .signin-two-bar {
-    width: 63%;
-    height: 10%;
+    width: 390px;
+    height: 5%;
     margin-top: 40px;
-    margin-bottom: 3rem;
 }
 
 .signin-two-form-div {
-    width: 70%;
-    height: 95%;
+    width: 100%;
+    height: 1024px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
 .signin-two-form-div-inner {
-    width: 90%;
-    height: 95%;
-    background-color: #fbfbfb;
+    width: 390px;
+    height: 654px;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
     border-radius: 0.5rem;
 }
 
-.form-two-container {
+.signin-two-h3-div {
     width: 100%;
-    height: 70%;
+    height: 20%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    background-color: #ffffff;
+}
+
+.signin-two-h3 {
+    font-size: 38px;
+    font-weight: 600;
+    letter-spacing: 0.02rem;
+    line-height: 100%;
+    color: #121914;
 }
 
 .signin-two-form {
     width: 100%;
-    height: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    height: 55%;
 }
 
-.create-account-card {
+.sign-in-account-card {
     width: 100%;
     height: 100%;
     overflow: hidden;
 }
 
-.register-card-section {
+.sign-in-card-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.register-card--div {
-    width: 200px;
-    min-height: 200px;
+.sign-in-card--div {
+    width: 263.49px;
+    min-height: 364.41px;
     display: flex;
     flex-direction: row;
-    background-color: #ffffff;
-    margin: 1rem;
+    background-color: #fbfbfb;
+    margin: 2rem;
     border: 1px solid gainsboro;
-    opacity: 0.5;
 }
 
-.register-card--div:hover {
-    opacity: 1.0;
+.sign-in-product {
+    width: 263.49px;
+    min-height: 364.41px;
+}
+
+.sign-in-card--img--div {
+    width: 263.49px;
+    min-height: 364.41px;
+}
+
+.sign-in-card--img {
+    width: 100%;
+    height: 100%;
+}
+
+.sign-in-account-card {
+    width: 712px;
+    height: 1024px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
 }
 
 .sign-up-two-btn {
-    width: 260px;
-    height: 38px;
-    border-radius: 5px;
+    width: 390px;
+    height: 64px;
+    border-radius: 12px;
     font-size: 1.5rem;
-    margin: 1.8rem 1.8rem 1.8rem 0;
-    background-color: #bfc3c0;
+    gap: 8px;
+    padding: 16px 32px;
+    margin-top: 50px;
     border: none;
+    background-color: #bfc3c0;
+    font-family: "Noto San";
+    cursor: pointer;
 }
 
 .input-signin-two {
-    width: 260px;
-    height: 30px;
+    width: 390px;
+    height: 58px;
     border-radius: 5px;
     font-size: 1.3rem;
+    background-color: #ffffff;
     border: 1px solid gainsboro;
 }
 
+.sign-in-two-name-label {
+    padding-top: 22px;
+}
+
 .checkbox-two-div-1 {
-    width: 250px;
+    width: 380px;
     height: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     font-size: 1.2rem;
+    margin-top: 15px;
 }
 
 .checkbox-two {
     margin-right: 0.6rem;
 }
 
-.create-account-para-two-2 {
-    position: relative;
-    left: 40px;
-    bottom: 30px;
+.sign-in-account-para-two-2 {
     font-size: 1.2rem;
+    margin-right: 3rem;
+    margin-bottom: 140px;
 }

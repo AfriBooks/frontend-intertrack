@@ -30,10 +30,10 @@ function App() {
         
         <Router>
             <Switch>
-              
-            <Route exact path= "/"> <Home/> </Route>
+            
+                <Route exact path= "/"> <CreateAccountForm/> </Route> 
+                <Route exact path= "/home"> <Home/> </Route>
                 <Route exact path= "/register"> <CreateAccount/> </Route>
-                <Route exact path= "/register-form"> <CreateAccountForm/> </Route>
                 <Route exact path= "/verify-email"> <VerifyEmail/> </Route>
                 <Route exact path= "/sign-in-one"> <SignInOne/> </Route>
                 <Route exact path= "/sign-in-two"> <SignInTwo/> </Route>

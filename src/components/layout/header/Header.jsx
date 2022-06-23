@@ -54,7 +54,7 @@ export const Header = () => {
         <div className='header-nav-bar-2'>
           <div className='header-nav-bar-2-a'>
             <ul className='header-nav-bar-ul'>
-                <li className='header-list'><Link to="/"><AiOutlineHome/> Home </Link></li>
+                <li className='header-list'><Link to="/home"><AiOutlineHome/> Home </Link></li>
                 <li className='header-list'><Link to="/library"><FiBookOpen/> My Library </Link></li>
                 <li className='header-list'><Link to="/genre"><MdOutlineLibraryBooks/> Genre </Link></li>
                 <li className='header-list'><Link to="/delivery-info"><BsCart/> My order<div className='cart-qty-num-div'>{cartTotalQuantity}</div> </Link></li>

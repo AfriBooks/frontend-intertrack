@@ -1,49 +1,47 @@
-.createAccountForm {
+.createAccountForm-two {
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
 }
 
-.createAccountForm-main-div {
+.createAccountForm-main-div-two {
     width: 90%;
-    height: 90%;
+    height: auto;
     background-color: #ffffff;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
 }
 
-.createAccountForm-div-left {
-    width: 45%;
-    height: 100%;
+.createAccountForm-div-left-two {
+    width: 48%;
+    height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
+    background-color: #ffffff;
 }
 
-.createAccountForm-bar {
-    width: 65%;
-    height: 10%;
+.createAccountForm-bar-two {
+    width: 390px;
+    height: 5%;
     margin-top: 40px;
 }
 
-.createAccountForm-div {
-    width: 70%;
-    height: 85%;
+.createAccountForm-div-two {
+    width: 100%;
+    height: 1024px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
 }
 
-.createAccountForm-div-inner {
-    width: 90%;
-    height: 90%;
+.createAccountForm-div-inner-two {
+    width: 390px;
+    height: 654px;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -52,7 +50,7 @@
     border-radius: 0.5rem;
 }
 
-.createAccountForm-h3-div {
+.createAccountForm-h3-div-two {
     width: 100%;
     height: 20%;
     display: flex;
@@ -61,90 +59,104 @@
     background-color: #ffffff;
 }
 
-.createAccountForm-h3 {
-    font-size: 3rem;
+.createAccountForm-h3-two {
+    font-size: 38px;
+    font-weight: 600;
+    letter-spacing: 0.02rem;
+    line-height: 100%;
+    color: #121914;
 }
 
-.createAccountForm-para-1 {
-    font-size: 1.2rem;
+.createAccountForm-para-1-two {
+    font-size: 16px;
+    font-weight: 400;
+    color: #414b43;
+    line-height: 100%;
+    font-family: 'Noto San';
+    font-style: normal;
+    margin-top: 16px;
 }
 
-.createAccountForm-container {
+.createAccountForm-form-two {
     width: 100%;
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #ffffff;
+    height: 70%;
 }
 
-.createAccountForm-form {
-    width: 100%;
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin-top: -2.5rem;
-}
-
-.createAccountForm-input {
-    width: 250px;
-    height: 30px;
+.createAccountForm-input-two {
+    width: 390px;
+    height: 58px;
     border-radius: 5px;
     font-size: 1.3rem;
-    background-color: #fbfbfb;
+    background-color: #ffffff;
     border: 1px solid gainsboro;
 }
 
-.createAccountForm-sign-up-btn {
-    width: 255px;
-    height: 36px;
-    border-radius: 5px;
+.createAccountForm-sign-up-btn-two {
+    width: 390px;
+    height: 64px;
+    border-radius: 12px;
     font-size: 1.5rem;
-    margin-top: 1.5rem;
+    gap: 8px;
+    padding: 16px 32px;
+    margin-top: 40px;
     border: none;
+    background-color: #bfc3c0;
+    font-family: "Noto San";
+    cursor: pointer;
 }
 
-.createAccountForm-para-2 {
+.createAccountForm-para-2-two {
     font-size: 1.2rem;
     margin-right: 3rem;
-    margin-bottom: 2rem;
+    margin-bottom: 140px;
 }
 
-.createAccountForm-div-right {
-    width: 45%;
+.createAccountForm-div-right-two {
+    width: 48%;
     height: 95%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     background-color: #fbfbfb;
-}
-
-.createAccountForm-card {
-    width: 100%;
-    height: 100%;
     overflow: hidden;
 }
 
-.register-card-section {
+.createAccountForm-card-div-two {
+    width: 712px;
+    height: 1024px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.register-card-section-two {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.register-card--div {
-    width: 200px;
-    min-height: 200px;
+.register-card--div-two {
+    width: 263.49px;
+    min-height: 364.41px;
     display: flex;
     flex-direction: row;
     background-color: #fbfbfb;
-    margin: 1rem;
+    margin: 2rem;
     border: 1px solid gainsboro;
-    opacity: 0.5;
 }
 
-.register-card--div:hover {
-    opacity: 1.0;
+.createAccountForm-card-product-div-two {
+    width: 263.49px;
+    min-height: 364.41px;
+}
+
+.createAccountForm-card--img--div {
+    width: 263.49px;
+    min-height: 364.41px;
+}
+
+.createAccountForm-card--img {
+    width: 100%;
+    height: 100%;
 }
