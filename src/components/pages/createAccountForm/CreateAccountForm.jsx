@@ -8,7 +8,21 @@ import { useHistory } from 'react-router-dom';
 import { Header } from '../../layout/header/Header'
 
 
+
 export const CreateAccountForm = () => {
+
+    const {items, status} = useSelector(state => state.products);
+
+    const auth = useSelector(state => state.auth);
+    console.log(auth)
+
+    const history = useHistory()
+
+    useEffect(() => {
+        if (auth._id) {
+            history.push("/home")
+        }
+    }, [auth._id, history])
 
     const [ user, setUser ] = useState({
         name: "",
@@ -17,11 +31,6 @@ export const CreateAccountForm = () => {
     })
 
     console.log("user:", user)
-
-    const {items, status} = useSelector(state => state.products);
-
-    const auth = useSelector(state => state.auth);
-    console.log(auth._id)
 
     const dispatch = useDispatch()
 
@@ -32,15 +41,12 @@ export const CreateAccountForm = () => {
         dispatch(registerUser(user))
         
     }
+    
 
 
-    // const history = useHistory()
+    
 
-    // useEffect(() => {
-    //     if (auth._id) {
-    //         history.push("/")
-    //     }
-    // }, [auth._id, history])
+    
   
     const getProducts = items.map((product) => {
             
@@ -94,18 +100,18 @@ export const CreateAccountForm = () => {
                     <label className='createAccountForm-password-label-two' id="password-label">Password</label><br/>
                     <input className='createAccountForm-input-two' type ="password" placeholder='password' onChange={(e) => setUser({...user, password: e.target.value})} /><br/>
 
-                    <button className='createAccountForm-sign-up-btn-two'>Sign up</button>
+                    <button className='createAccountForm-sign-up-btn-two'>Sign up </button>
+
+                   
 
                    
                 </form>
-                    
-
-                   
 
                     <p className='createAccountForm-para-2-two'>Already have an account?<Link to="/sign-in-two"> Login </Link></p>
 
             </div>
         </div>
+        
     </div>
 
     <div className='createAccountForm-div-right-two'>

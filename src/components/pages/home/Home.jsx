@@ -26,7 +26,7 @@ export const Home = () => {
             <div key={productItem.id} className="productItem">
                 
                 <div className="card-two--img--div">
-                <Link to={`/product/${productItem.id}`}><img className='card-two--img' src= "https://africanbookaddict.files.wordpress.com/2017/12/img_0945.jpg" alt='' /></Link>
+                <Link to={`/product/${productItem.id}`}><img className='card-two--img' src= {productItem.cover} alt='' /></Link>
                 </div>
                 
                 <div className='card-two--title--div'>

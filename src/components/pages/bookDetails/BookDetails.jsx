@@ -64,7 +64,7 @@ useEffect(() => {
             <div className='bookDetails-div-left'>
                     <div className='bookDetails-div-left-subdiv'>
                          <div className='bookDetails-div-left-subdiv-image-div'>
-                             <img className='subdiv-image-div-image' src="https://africanbookaddict.files.wordpress.com/2018/12/wrbg.jpg" alt=''/>
+                             <img className='subdiv-image-div-image' src= {singleItem.cover} alt=''/>
 
                          </div>
                     </div>

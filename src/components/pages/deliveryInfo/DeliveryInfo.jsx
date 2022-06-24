@@ -151,7 +151,7 @@ export const DeliveryInfo = () => {
                                 <div className='empty-cart-div'>
                                     <p>Your cart is currently empty</p>
                                     <div className='start-shopping-div'>
-                                        <Link to="/"><MdKeyboardBackspace/> <span>Start Shopping</span></Link>
+                                        <Link to="/home"><MdKeyboardBackspace/> <span>Start Shopping</span></Link>
                                     </div>
                                 </div>
 
@@ -163,7 +163,7 @@ export const DeliveryInfo = () => {
 
                                         <div className='single-order-div-cart'>
                                             <div className='single-order-image-div'>
-                                                <img className='single-order-image' src= "https://africanbookaddict.files.wordpress.com/2018/12/wrbg.jpg" alt='' />
+                                                <img className='single-order-image' src= {cartItem.cover} alt='' />
 
                                             </div>
                                             <div className='single-order-title-div-cart'>
@@ -203,7 +203,7 @@ export const DeliveryInfo = () => {
                                     </div>
 
                                     <button className='clear-cart-btn' onClick={() => handleClearCart()}>Clear cart</button>
-                                  <div><Link to = "/"> Continue shopping</Link></div>
+                                  <div><Link to = "/home"> Continue shopping</Link></div>
                             </div>
                             )}
                             

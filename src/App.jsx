@@ -1,6 +1,7 @@
 //feature-1
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import './App.css';
+import "react-toastify/dist/ReactToastify.css"
 import { BestRomance } from "./components/pages/bestRomance/BestRomance";
 import { BestSellerBook } from "./components/pages/bestSellerBook/BestSellerBook";
 import { BookDetails } from "./components/pages/bookDetails/BookDetails";
@@ -23,12 +24,14 @@ import { PopularNow } from "./components/pages/popularNow/PopularNow";
 import { SignInOne } from "./components/pages/signInOne/SignInOne";
 import { SignInTwo } from "./components/pages/signInTwo/SignInTwo";
 import { VerifyEmail } from "./components/pages/verifyEmail/VerifyEmail";
+import {ToastContainer} from "react-toastify"
 
 function App() {
     return ( 
         <div className = "app">
         
         <Router>
+            <ToastContainer/>
             <Switch>
             
                 <Route exact path= "/"> <CreateAccountForm/> </Route> 

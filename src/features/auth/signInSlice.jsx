@@ -1,6 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import jwtDecode from "jwt-decode"
+import {toast} from "react-toastify"
 
 const initialState = {
     
@@ -28,6 +29,9 @@ export const logInUser = createAsyncThunk (
 
             if (tok) {
                 window.location.pathname = "/home";
+                alert("Welcome! Click ok to continue")
+
+                toast.success("Welcome back", {position: "top-left" }) 
             }
             const [data] = tok;
             if (data.status === "200") {

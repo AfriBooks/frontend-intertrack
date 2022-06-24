@@ -2,6 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { url } from "../api";
 import jwtDecode from "jwt-decode"
+import {toast} from "react-toastify"
 
 const initialState = {
     
@@ -28,13 +29,17 @@ export const registerUser = createAsyncThunk (
 
             console.log(token.data._id)
 
-            // if (token) {
-            //     window.location.pathname = "/home";
-            // }
-            // const [data] = token;
-            // if (data.status === "200") {
-            //     //redirect to homepage
-            // }
+            if (token) {
+
+                window.location.pathname = "/home";
+                alert("Register successful! Click ok to continue")
+
+                toast.success("Register successful", {position: "top-left" }) 
+            }
+            const [data] = token;
+            if (data.status === "200") {
+                //redirect to homepage
+            }
 
         } catch(err) {
             console.log(err.response.data);

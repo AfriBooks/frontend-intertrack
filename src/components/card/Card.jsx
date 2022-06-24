@@ -11,6 +11,7 @@ import axios from 'axios';
 
 
 export const Card = () => {
+    
 
     const [displayCards, setDisplayCards] = useState([]);
 const [isloading, setIsLoading] = useState([])
@@ -60,7 +61,7 @@ const getBooks = displayCards.map(product => {
                 <div key={_id} className="product">
                     
                     <div className="card--img--div">
-                    <Link to={`/books/${_id}`}><img className='card--img' src= "https://africanbookaddict.files.wordpress.com/2018/12/wrbg.jpg" alt='' /></Link>
+                    <Link to={`/books/${_id}`}><img className='card--img' src= {cover} alt='' /></Link>
                     </div>
 
                     <div className="card--title--div-home">

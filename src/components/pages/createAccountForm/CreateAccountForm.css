@@ -89,6 +89,7 @@
     font-size: 1.3rem;
     background-color: #ffffff;
     border: 1px solid gainsboro;
+    padding-left: 10px;
 }
 
 .createAccountForm-sign-up-btn-two {

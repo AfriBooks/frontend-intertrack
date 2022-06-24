@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Header.css";
 import {Link} from "react-router-dom"
 import { FiSearch } from 'react-icons/fi';
@@ -20,6 +20,14 @@ export const Header = () => {
   const auth = useSelector(state => state.auth)
   console.log(auth._id)
 
+  // const [filter, setFilter] = useState("")
+
+  // const onSearch = (item) => {
+
+  //   console.log("item", item)
+
+  // }
+
   return (
     <div className='header'>
 
@@ -31,7 +39,7 @@ export const Header = () => {
           <div className='header-nav-bar-1-b'>
               <div className='header-search-bar-div'>
                 <div className='search-icon-div'><FiSearch className='search-icon' /></div>
-                <input className='header-search-bar' type= "text" placeholder="Search by book name, arthors, genre etc"  />
+                <input className='header-search-bar' type= "text" placeholder=" Search by genre"/>
 
             </div>
 
