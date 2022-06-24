@@ -26,15 +26,15 @@ export const registerUser = createAsyncThunk (
                 password: user.password,
             });
 
-            console.log(token)
+            console.log(token.data._id)
 
-            if (token) {
-                window.location.pathname = "/";
-            }
-            const [data] = token;
-            if (data.status === "200") {
-                //redirect to homepage
-            }
+            // if (token) {
+            //     window.location.pathname = "/home";
+            // }
+            // const [data] = token;
+            // if (data.status === "200") {
+            //     //redirect to homepage
+            // }
 
         } catch(err) {
             console.log(err.response.data);

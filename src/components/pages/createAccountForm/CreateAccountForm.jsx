@@ -21,10 +21,10 @@ export const CreateAccountForm = () => {
     const {items, status} = useSelector(state => state.products);
 
     const auth = useSelector(state => state.auth);
-    console.log(auth)
+    console.log(auth._id)
 
     const dispatch = useDispatch()
-    console.log(auth._id)
+
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -73,7 +73,7 @@ export const CreateAccountForm = () => {
     <div className='createAccountForm-div-left-two'>
     
         <div className='createAccountForm-bar-two'>
-            <h3><Link to="/home"> AfriBook</Link></h3>
+            <h3>AfriBook</h3>
         </div>
 
         <div className='createAccountForm-div-two'>

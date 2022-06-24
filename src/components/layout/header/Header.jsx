@@ -18,6 +18,7 @@ export const Header = () => {
   const { cartTotalQuantity } = useSelector(state => state.cart)
 
   const auth = useSelector(state => state.auth)
+  console.log(auth._id)
 
   return (
     <div className='header'>
@@ -69,6 +70,14 @@ export const Header = () => {
                 
             
             </ul>
+          </div>
+
+          <div>
+
+          {auth._id ? <div>Logout</div> 
+          : <div className='header-login-div'><div><Link to="/sign-in-two"> Login</Link></div>
+          <div className='header-reg'><Link to="/"> Register</Link></div></div>}
+
           </div>
 
           

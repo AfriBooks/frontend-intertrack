@@ -60,7 +60,7 @@ export const SignInTwo = () => {
         <div className='sign-in-account-div-left-two'>
 
             <div className='signin-two-bar'>
-               <div className='signinTwo-afribook'> <h3><Link to="/home"> AfriBook</Link></h3></div>
+               <div className='signinTwo-afribook'> <h3> AfriBook</h3></div>
             
             </div>
 
@@ -71,7 +71,7 @@ export const SignInTwo = () => {
         
 
                     <form onSubmit={handleSignIn} className="signin-two-form">
-                        <label id="sign-in-two-name-label">Name</label><br />
+                        <label id="sign-in-two-name-label">Email</label><br />
                         <input className='input-signin-two' type ="email" placeholder='email' onChange={(e) =>  setsignIn({...signIn, email: e.target.value})} />
 
                         <label className='signi-in-two-name-label' id="password-label">Password</label><br/>
