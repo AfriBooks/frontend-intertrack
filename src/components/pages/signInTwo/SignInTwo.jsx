@@ -40,7 +40,7 @@ export const SignInTwo = () => {
               <div key={product._id} className="sign-in-product">
                   
                   <div className="sign-in-card--img--div">
-                      <img className='sign-in-card--img' src= "https://brittlepaper.com/wp-content/uploads/2021/06/zainab-takes-new-york.jpeg" alt='' />
+                      <img className='sign-in-card--img' src= {product.cover} alt='' />
                   </div>
                   
   

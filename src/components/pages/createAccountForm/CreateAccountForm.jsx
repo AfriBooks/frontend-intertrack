@@ -57,7 +57,7 @@ export const CreateAccountForm = () => {
               <div key={product._id} className="createAccountForm-card-product-div-two">
                   
                   <div className="createAccountForm-card--img--div">
-                      <img className='createAccountForm-card--img' src= "https://brittlepaper.com/wp-content/uploads/2021/06/81b6ahl1uL.jpeg" alt='' />
+                      <img className='createAccountForm-card--img' src= {product.cover} alt='' />
                   </div>
                   
   
