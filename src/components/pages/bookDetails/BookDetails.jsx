@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Header } from '../../layout/header/Header'
 import "./BookDetails.css"
 import { AiOutlineStar } from 'react-icons/ai';
@@ -16,7 +16,7 @@ import { single, singleProductFetch } from '../../../features/product/singleProd
 import { useEffect } from 'react';
 
 
-
+//books/:id/reviews
 
 
 export const BookDetails = () => {
@@ -49,11 +49,44 @@ const fetchProductDetails = async () => {
 
 };
 
+const [reviews, setReviews] = useState([]);
+
+const fetchProductReviews = async () => {
+
+    const response = await axios.get(`https://afribook.herokuapp.com/books/${id}/reviews`)
+    
+    
+    .catch((err) => {
+        console.log("error ", err)
+        
+
+    });
+    console.log(response.data)
+    setReviews(response.data)
+
+};
+
 
 useEffect(() => {
     fetchProductDetails();
+    fetchProductReviews()
     
 }, [id]);
+
+
+
+// useEffect(() => {
+//     fetch(`https://afribook.herokuapp.com/books/${id}/reviews`)
+//     .then((res) => res.json())
+//     .then(console.log(reviews))
+//     .catch((error) => {
+//         console.log(error)
+//     })
+    
+    
+
+// }, [])
+
 
   return (
     <div className='bookDetails'>

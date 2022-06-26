@@ -28,6 +28,7 @@ export const logInUser = createAsyncThunk (
             console.log(tok)
 
             if (tok) {
+                localStorage.setItem("afribook_user", JSON.stringify(tok));
                 window.location.pathname = "/home";
                 alert("Welcome! Click ok to continue")
 

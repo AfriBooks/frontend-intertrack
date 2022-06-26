@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import "./Header.css";
-import {Link} from "react-router-dom"
+import {Link, useParams} from "react-router-dom"
 import { FiSearch } from 'react-icons/fi';
 import { BsCart } from 'react-icons/bs';
 import {IoIosNotificationsOutline  } from 'react-icons/io';
@@ -11,22 +11,95 @@ import { FiBookOpen } from 'react-icons/fi';
 import { MdOutlineLibraryBooks } from 'react-icons/md';
 import { BsBag } from 'react-icons/bs';
 import { useSelector } from 'react-redux';
+import axios from 'axios';
+import { BsStar } from 'react-icons/bs';
+import Cookies from 'js-cookie';
 
 
 export const Header = () => {
+  const current_user = Cookies.get("afribook_currentUser");
+  //const current_user = JSON.parse(localStorage.getItem("afribook_user"))
+console.log(current_user)
+  //const current_user_name = current_user.name
 
   const { cartTotalQuantity } = useSelector(state => state.cart)
 
   const auth = useSelector(state => state.auth)
   console.log(auth._id)
 
-  // const [filter, setFilter] = useState("")
 
-  // const onSearch = (item) => {
+  const [filterItem, setFilterItem] = useState("")
+  //console.log(filterItem)
 
-  //   console.log("item", item)
+  const getCategory = async (categories) => {
+    
+  const response = await axios.get(
+    `https://afribook.herokuapp.com/books/categories/${categories}`
+    //`https://afribook.herokuapp.com/books/categories/love`
+    
+    )
+  .catch((err) => {
+      console.log(err)
+  })
+  if(response) {
+    
+    console.log(response.data)
+    setFilterItem(response.dada)
+  }
+}
 
-  // }
+useEffect(() => {
+  getCategory()
+}, []);
+
+// const category = filterItem.filter((item) => {
+//   if(item === "") {
+//     return item;
+//   } else if (item.genre.toLowerCase().includes(filterItem.toLocaleLowerCase())) {
+//     return item;
+
+//   }
+// })
+
+// const displayCategory = category.map((cate) => {
+
+//   const {_id, cover, title, author, price} = cate;
+
+//   return (
+//     <div>
+
+//         <div key={_id} className="product">
+              
+//               <div className="card--img--div">
+//               <Link to={`/books/${_id}`}><img className='card--img' src= {cover} alt='' /></Link>
+//               </div>
+
+//               <div className="card--title--div-home">
+//                   <span className='card--title'><strong>{title}</strong></span>
+//               </div>
+              
+//               <div className="card--author--div-home">
+//                     <span className='card--name'> {author}</span>
+//               </div>
+                  
+//               <div className='card-price-div-home'>  
+//                   <span className='card--price'><span className='starting-at'>$</span> {price}</span>
+//               </div>
+              
+//               <div className="card--star--div-home">
+//                   <span className='star'><BsStar className='home-card-star'/><BsStar className='home-card-star'/><BsStar className='home-card-star'/><BsStar className='home-card-star'/> </span> 
+                  
+//               </div>
+      
+
+//         </div>
+
+
+//     </div>
+//   )
+// })
+
+
 
   return (
     <div className='header'>
@@ -38,10 +111,20 @@ export const Header = () => {
           </div>
           <div className='header-nav-bar-1-b'>
               <div className='header-search-bar-div'>
-                <div className='search-icon-div'><FiSearch className='search-icon' /></div>
-                <input className='header-search-bar' type= "text" placeholder=" Search by genre"/>
 
-            </div>
+                <div className='search-icon-div'><FiSearch className='search-icon' onClick={getCategory} /></div>
+                <input className='header-search-bar' type= "text" placeholder=" Search by genre" onChange={(ev) => {setFilterItem(ev.target.value)}} />
+
+              </div>
+
+              {/* <select id="dropdown" name="city" className="dropdown1">
+                    <option value="LAGOS">Select genre</option>
+                    <option value="LAGOS">Love</option>
+                    <option value="ABUJA">Fiction</option>
+                    <option value="BENIN">Drama</option>
+                    <option value="BENIN">History</option>
+                    <option value="BENIN">Action</option>
+              </select> */}
 
           </div>
           <div className='header-nav-bar-1-c'>
@@ -50,7 +133,7 @@ export const Header = () => {
             <div className='notification-div'><IoIosNotificationsOutline/></div>
             <div className='profle-div'>
                 <div className='avatar-div'><img className='avatar' src='https://thumbs.dreamstime.com/b/default-avatar-profile-vector-user-profile-default-avatar-profile-vector-user-profile-profile-179376714.jpg' alt='pic' /></div>
-                <p className='profile-name'>Bisola</p>
+                <p className='profile-name'>{}</p>
 
             </div>
             <div className='drop-down-div'><IoIosArrowDown/></div>
@@ -83,7 +166,7 @@ export const Header = () => {
           <div>
 
           {auth._id ? <div>Logout</div> 
-          : <div className='header-login-div'><div><Link to="/sign-in-two"> Logout</Link></div>
+          : <div className='header-login-div'><div><Link to="/sign-in-two"> Login</Link></div>
           <div className='header-reg'><Link to="/"> Register</Link></div></div>}
 
           </div>

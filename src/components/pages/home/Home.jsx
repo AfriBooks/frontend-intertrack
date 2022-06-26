@@ -1,20 +1,116 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import "./Home.css"
 //import frame from '../../images/frame.png'
 import {Link} from "react-router-dom"
-import { Card } from '../../card/Card'
-import { Header } from '../../layout/header/Header'
 import { Footer } from '../../layout/footer/Footer'
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
 import { useSelector } from 'react-redux'
 import { BsStar } from 'react-icons/bs';
+import { FiSearch } from 'react-icons/fi';
+import { BsCart } from 'react-icons/bs';
+import {IoIosNotificationsOutline  } from 'react-icons/io';
+import { IoIosArrowDown } from 'react-icons/io';
+import { RiMistFill } from 'react-icons/ri';
+import { AiOutlineHome } from 'react-icons/ai';
+import { FiBookOpen } from 'react-icons/fi';
+import { MdOutlineLibraryBooks } from 'react-icons/md';
+import axios from 'axios';
+
 
 //import { useGetAllBooksQuery } from '../../../features/productApi/productApi'
 
 
 export const Home = () => {
 
+  const { cartTotalQuantity } = useSelector(state => state.cart)
   const {items, status} = useSelector(state => state.products);
+
+  const [displayCards, setDisplayCards] = useState([]);
+  const [isloading, setIsLoading] = useState([])
+
+  const getDisplayCard = async () => {
+    setIsLoading(true);
+  const response = await axios.get(
+    "https://afribook.herokuapp.com/books"
+    
+    )
+  .catch((err) => {
+      console.log(err)
+  })
+  if(response) {
+    setIsLoading(false)
+    console.log(response.data.books)
+    setDisplayCards(response.data.books)
+  }
+}
+
+useEffect(() => {
+   getDisplayCard()
+}, []);
+
+const [filterItem, setFilterItem] = useState("")
+  console.log(filterItem)
+
+const category = displayCards.filter((element) => {
+    if(element === "") {
+      return element;
+    } else if (element.genre.toLowerCase().includes(filterItem.toLocaleLowerCase())) {
+      return element;
+  
+    }
+  })
+
+const getBooks = category.map(product => {
+  const {_id, cover, title, author, price} = product;
+  
+    
+  return (
+
+      <div className="card--div-1">
+          
+                  
+          <div key={_id} className="product">
+              
+              <div className="card--img--div">
+              <Link to={`/books/${_id}`}><img className='card--img' src= {cover} alt='' /></Link>
+              </div>
+
+              <div className="card--title--div-home">
+                  <span className='card--title'><strong>{title}</strong></span>
+              </div>
+              
+              <div className="card--author--div-home">
+                   <span className='card--name'> {author}</span>
+              </div>
+                 
+              <div className='card-price-div-home'>  
+                  <span className='card--price'><span className='starting-at'>$</span> {price}</span>
+              </div>
+              
+              <div className="card--star--div-home">
+                  <span className='star'><BsStar className='home-card-star'/><BsStar className='home-card-star'/><BsStar className='home-card-star'/><BsStar className='home-card-star'/> </span> 
+                  
+              </div>
+      
+
+          </div>
+      </div>
+
+    )
+})
+
+
+
+  
+
+  const advertBook = items.filter((a) => {
+    if (a._id === "62b1da4eb44c85b8c89a36fe") {
+      
+      return a;
+      
+    }
+  })
+  //console.log(advertBook)
   
 
   const getBooksTwo = items.map((productItem) => {
@@ -55,29 +151,67 @@ export const Home = () => {
       )
 })
 
-   //const {data, error, isLoading} = useGetAllBooksQuery();
-
-//    const getBooks = data.map(book => {
-       
-//     return (
-    
-//      <Card 
-//           key = {book.results.books.id}
-//           image = {book.results.books.book_image}
-//           title = {book.results.books.title}
-//           publisher = {book.results.books.publisher}
-//           price = {book.results.books.price}
-//           author = {book.results.books.author}
-//           description = {book.results.books.description}
-//      />
-    
-//     )
-// })
 
   return (
       <div className='home'>
       
-          <Header/>
+        <div className='header-home'>
+
+        <div className='header-nav-bar-1'>
+          <div className='header-nav-bar-1-a'>
+              <div className='logo-div'><h3 className='logo'> AfriBook</h3> </div> 
+
+          </div>
+          <div className='header-nav-bar-1-b'>
+              <div className='header-search-bar-div'>
+
+                <div className='search-icon-div'><FiSearch className='search-icon' /></div>
+                <input className='header-search-bar' type= "text" placeholder=" Search by genre" onChange={(ev) => {setFilterItem(ev.target.value)}} />
+
+              </div>
+
+          </div>
+          <div className='header-nav-bar-1-c'>
+            <div className='switch-to-author-div'><button className='switch-to-author-btn'>Switch to author</button></div>
+            <div className='cart-container-div'><div className='cart-div'><Link to="/delivery-info"><BsCart/></Link></div><div className='cart-item-num-div'>{cartTotalQuantity}</div></div>
+            <div className='notification-div'><IoIosNotificationsOutline/></div>
+            <div className='profle-div'>
+                <div className='avatar-div'><img className='avatar' src='https://thumbs.dreamstime.com/b/default-avatar-profile-vector-user-profile-default-avatar-profile-vector-user-profile-profile-179376714.jpg' alt='pic' /></div>
+                <p className='profile-name'>{}</p>
+
+            </div>
+            <div className='drop-down-div'><IoIosArrowDown/></div>
+
+          </div>
+
+        </div>
+
+
+        <div className='header-nav-bar-2'>
+          <div className='header-nav-bar-2-a'>
+            <ul className='header-nav-bar-ul'>
+                <li className='header-list'><Link to="/home"><AiOutlineHome/> Home </Link></li>
+                <li className='header-list'><Link to="/library"><FiBookOpen/> My Library </Link></li>
+                <li className='header-list'><Link to="/genre"><MdOutlineLibraryBooks/> Genre </Link></li>
+                <li className='header-list'><Link to="/delivery-info"><BsCart/> My order<div className='cart-qty-num-div'>{cartTotalQuantity}</div> </Link></li>
+            </ul>
+          </div>
+
+          <div>
+
+          <div className='header-nav-bar-2-b'>
+               <div className='filter-div'>
+                <p className='filter'>Filter</p>
+                <RiMistFill className='filter-icon'/>
+
+               </div>
+
+          </div>
+
+        </div>
+
+        </div>
+        </div>
     
 
      
@@ -85,23 +219,34 @@ export const Home = () => {
           
           <div className='advert-div-a-home'>
               <h3 className='recommended-h3'>Recommended for you</h3>
+              
 
           </div>
-          <div className='advert-div-b'>
-              <div className='book-image-div-home'><img className='book-image' src='https://brittlepaper.com/wp-content/uploads/2021/06/81wazwmthal_custom-a049cb82b9d3d25d2729deb5a1ac5106b52ded22.jpeg' alt=''/></div>
-              <div className='book-title-div'>
-                <div className='book-title-div-sub'>
-                  <h3 className='book-title'>Book title</h3>
-                  <p>Author</p>
-                  <p><strong>Price</strong></p>
-                  <span>Rating</span>
-                  <p>Category</p>
-                  <button className='buy-btn'>Buy now</button>
-                </div>
-
-              </div>
-
+         {advertBook.map((b) => {
+    
+      const {_id, cover, price, title, author, genre} = b;
+      
+      return (
+        <div className='advert-div-b'>
+        <div className='book-image-div-home'><img className='book-image' src={cover} alt=''/></div>
+        <div className='book-title-div-home'>
+          <div className='book-title-div-sub'>
+            <h3 className='book-title'>{title}</h3>
+            <p>{author}</p>
+            <p><strong>N {price}</strong></p>
+            
+            <p>{genre}</p>
+            <button className='buy-btn'>Buy now</button>
           </div>
+
+        </div>
+
+    </div>
+
+      )
+      
+    
+  })}
 
       </div>
       <div className='home-popular-now-div'>
@@ -113,7 +258,10 @@ export const Home = () => {
 
       </div>
       <div className='home--card--container-1'>
-        <Card/>
+      
+            {isloading && <p>Loading...</p>}
+            {getBooks.length ? <div className='card--section'>{getBooks}</div> : ""}
+
       </div>
 
       <div className='newly-added-books-div'>

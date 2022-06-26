@@ -13,7 +13,7 @@ import axios from 'axios';
 export const Card = () => {
     
 
-    const [displayCards, setDisplayCards] = useState([]);
+const [displayCards, setDisplayCards] = useState([]);
 const [isloading, setIsLoading] = useState([])
 
 const getDisplayCard = async () => {

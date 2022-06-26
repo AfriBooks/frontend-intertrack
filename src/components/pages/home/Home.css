@@ -9,6 +9,20 @@
     font-family: 'Noto San';
 }
 
+.header-home {
+    width: 100%;
+    height: 110px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid gainsboro;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
 .home--card--container-1 {
     width: 100%;
     height: auto;
@@ -40,7 +54,7 @@
     width: 100%;
     height: 20%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: start;
     margin-top: 32px;
     margin-left: 3rem;
@@ -75,8 +89,8 @@
     height: 100%;
 }
 
-.book-title-div {
-    width: 20%;
+.book-title-div-home {
+    width: 30%;
     height: 80%;
     display: flex;
     flex-direction: column;
