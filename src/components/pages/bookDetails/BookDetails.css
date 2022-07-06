@@ -211,10 +211,19 @@
     font-size: 1.2rem;
 }
 
+.reply-para {
+    font-size: 11px;
+}
+
 .bottom-line {
     width: 190px;
     border: 1px solid gainsboro;
     margin: 5px 8px 0 0;
+}
+
+.reply-div {
+    position: relative;
+    left: 70px;
 }
 
 .See-more-replies {

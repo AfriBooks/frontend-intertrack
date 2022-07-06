@@ -17,16 +17,23 @@ import { MdOutlineLibraryBooks } from 'react-icons/md';
 import axios from 'axios';
 
 
+
 //import { useGetAllBooksQuery } from '../../../features/productApi/productApi'
 
 
 export const Home = () => {
+
+  
 
   const { cartTotalQuantity } = useSelector(state => state.cart)
   const {items, status} = useSelector(state => state.products);
 
   const [displayCards, setDisplayCards] = useState([]);
   const [isloading, setIsLoading] = useState([])
+
+  const current_user = JSON.parse(localStorage.getItem("afribook_user"))
+  console.log(current_user)
+  const { name } = current_user.data;
 
   const getDisplayCard = async () => {
     setIsLoading(true);
@@ -177,10 +184,18 @@ const getBooks = category.map(product => {
             <div className='notification-div'><IoIosNotificationsOutline/></div>
             <div className='profle-div'>
                 <div className='avatar-div'><img className='avatar' src='https://thumbs.dreamstime.com/b/default-avatar-profile-vector-user-profile-default-avatar-profile-vector-user-profile-profile-179376714.jpg' alt='pic' /></div>
-                <p className='profile-name'>{}</p>
+                <p className='profile-name'>{ name }</p>
 
             </div>
-            <div className='drop-down-div'><IoIosArrowDown/></div>
+            <div className='drop-down-div-home'> 
+              <IoIosArrowDown className='drop-down-icon-home'/> 
+              <div className='drop-down-content-home'>
+                <p> <Link to=""> Profile </Link></p>
+                <p> <Link to="/sign-in-two" > Logout </Link></p>
+                <p> <Link to="/"> Register </Link></p>
+
+              </div>
+            </div>
 
           </div>
 

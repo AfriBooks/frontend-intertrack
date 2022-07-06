@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import authReducer from '../auth/authSlice';
 import buyerAddressReducer from '../auth/buyerAddressSlice';
-import signInReducer from '../auth/signInSlice';
+import signInReducer, { logoutUser } from '../auth/signInSlice';
 import cartReducer, { getTotals } from '../cart/cartSlice';
 import productReducer, { productsFetch } from '../product/productSlice'; 
 import singleProductReducer, { singleProductFetch } from '../product/singleProductSlice';
@@ -32,6 +32,7 @@ const store = configureStore({
   store.dispatch(productsFetch());
   //store.dispatch(singleProductFetch());
   store.dispatch(getTotals());
+  //store.dispatch(logoutUser());
 
 
   export default store;

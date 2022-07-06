@@ -23,6 +23,12 @@ export const BookDetails = () => {
     const {singleItem, status} = useSelector(state => state.singleProduct);
     console.log(singleItem)
 
+    const reviewArray = singleItem.reviews;
+    console.log(reviewArray)
+
+
+    
+
     const dispatch = useDispatch();
     const history = useHistory()
 
@@ -48,8 +54,16 @@ const fetchProductDetails = async () => {
     dispatch(single(response.data))
 
 };
+useEffect(() => {
+    fetchProductDetails();
+    
+    
+}, [id]);
+
+const [showReply, setShowReply] = useState(false);
 
 const [reviews, setReviews] = useState([]);
+console.log(reviews)
 
 const fetchProductReviews = async () => {
 
@@ -65,10 +79,8 @@ const fetchProductReviews = async () => {
     setReviews(response.data)
 
 };
-
-
 useEffect(() => {
-    fetchProductDetails();
+    
     fetchProductReviews()
     
 }, [id]);
@@ -86,6 +98,8 @@ useEffect(() => {
     
 
 // }, [])
+
+//const getReviews 
 
 
   return (
@@ -153,9 +167,9 @@ useEffect(() => {
 
             </div>
             <div className='bookDetails-div-2-right'>
-                <div className='review-div'>
+                <div className="review-div">
                     <h3>Reviews</h3>
-                    <span>See what people think about Zainab takes New York</span>
+                    <span>See what people think about {singleItem.title}</span>
                     <p> <strong>4.0</strong> <AiOutlineStar/><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/></p>
                     <span>40 ratings/24 reviews</span>
                     <p>What would you rate this book?</p>
@@ -166,51 +180,64 @@ useEffect(() => {
                         <button className='post-btn'>Post</button>
                     </div>
 
-                    <p>Showing 1 - 5 of 24 reviews</p>
+                   {/* <p>Showing 1 - 5 of 24 reviews</p> */}
 
                 </div>
-                <div className='single-review-div'>
-                    <h4>Bisola</h4>
-                    <p><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/></p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                     Praesent ullamcorper dapibus diam. Sed faucibus consectetur laoreet.
-                      Proin ac nibh turpis. Mauris efficitur efficitur dui eu dapibus.
-                       Cras interdum nisl et sodales dapibus.
-                        Aliquam erat volutpat. Proin ante nisi, laoreet molestie dui a, porttitor viverra sem.
-                         Quisque pulvinar ultricies sapien ut lacinia<span className='more'>...more</span> </p>
-                         <p>Feb 10, 2021</p>
-                         <p>Replies 10 <IoIosArrowDown/> <RiThumbUpLine/> 20 likes</p>
+               
+                { !reviews.length > 0 ? (
+                    <div>
+                        <p>This book has no review</p>
+                    </div>
+                ) :
+                (
+                    
+                     <div>
+                     {reviews.map((rev) => {
+                        const replyArray = rev.replies;
+                         return (
+                             <div>
+                                 <div className='single-review-div'>
+                                 <h4>{rev.user.username}</h4>
+                                 <p><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/></p>
+                                 <p>{rev.review} </p>
+                                {/* <p>Feb 10, 2021</p> */}
+                                <p className="reply-para">Replies 10 <IoIosArrowDown onClick={() => setShowReply(!showReply) } /> <RiThumbUpLine/> 20 likes</p>
+                                 
+                                { showReply ? 
+                                
+                                <div className='reply-div'>
 
+                                {replyArray.map((rep) => {
+                                   return (
+                                       
+                                       <p>{rep.reply}</p>
+                                   )
+                                })}
+
+                                </div>
+
+                                : null }
+                                
+
+
+                                </div>
+                                
+                            </div>
+                        )
+                    })}
+                    
 
                 </div>
-                <div className='single-review-div'>
-                    <h4>Bisola</h4>
-                    <p><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/></p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                     Praesent ullamcorper dapibus diam. Sed faucibus consectetur laoreet.
-                      Proin ac nibh turpis. Mauris efficitur efficitur dui eu dapibus.
-                       Cras interdum nisl et sodales dapibus.
-                        Aliquam erat volutpat. Proin ante nisi, laoreet molestie dui a, porttitor viverra sem.
-                         Quisque pulvinar ultricies sapien ut lacinia<span className='more'>...more</span> </p>
-                         <p>Feb 10, 2021</p>
-                         <p>Replies 10 <IoIosArrowDown/> <RiThumbUpLine/> 20 likes</p>
-
-
-                </div>
-                <div className='single-review-div'>
-                    <h4>Bisola</h4>
-                    <p><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/></p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                     Praesent ullamcorper dapibus diam. Sed faucibus consectetur laoreet.
-                      Proin ac nibh turpis. Mauris efficitur efficitur dui eu dapibus.
-                       Cras interdum nisl et sodales dapibus.
-                        Aliquam erat volutpat. Proin ante nisi, laoreet molestie dui a, porttitor viverra sem.
-                         Quisque pulvinar ultricies sapien ut lacinia<span className='more'>...more</span> </p>
-                         <p>Feb 10, 2021</p>
-                         <p>Replies 10 <IoIosArrowDown/> <RiThumbUpLine/> 20 likes</p>
-
-
-                </div>
+                  
+               ) 
+               
+                           
+               } 
+                
+               
+                
+               
+               
                 <div className='bottom-line-div'>
                     <span><hr className='bottom-line' /></span>
                     <span className='See-more-replies'>See more replies</span>
@@ -242,3 +269,91 @@ useEffect(() => {
     </div>
   )
 }
+
+
+/*
+
+ <div className='single-review-div'>
+                    <h4>Bisola</h4>
+                    <p><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                     Praesent ullamcorper dapibus diam. Sed faucibus consectetur laoreet.
+                      Proin ac nibh turpis. Mauris efficitur efficitur dui eu dapibus.
+                       Cras interdum nisl et sodales dapibus.
+                        Aliquam erat volutpat. Proin ante nisi, laoreet molestie dui a, porttitor viverra sem.
+                         Quisque pulvinar ultricies sapien ut lacinia<span className='more'>...more</span> </p>
+                         <p>Feb 10, 2021</p>
+                         <p>Replies 10 <IoIosArrowDown/> <RiThumbUpLine/> 20 likes</p>
+
+
+                </div>
+
+*/
+
+/*
+
+reviews.map((rev) => {
+    return (
+        <div className='single-review-div'>
+        <h4>{rev.user.username}</h4>
+        <p><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/></p>
+        <p>{rev.review} </p>
+        <p>Feb 10, 2021</p>
+        <p>Replies 10 <IoIosArrowDown/> <RiThumbUpLine/> 20 likes</p>
+
+
+    </div>
+    )
+*/
+
+// { !reviewArray.length > 0 ? (
+//                     <div>
+//                         <p>This book has no review</p>
+//                     </div>
+//                 ) :
+//                 (
+                    
+//                      <div>
+//                      {reviewArray.map((rev) => {
+//                         const replyArray = rev.replies;
+//                          return (
+//                              <div>
+//                                  <div className='single-review-div'>
+//                                  <h4>{rev.user.username}</h4>
+//                                  <p><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/></p>
+//                                  <p>{rev.review} </p>
+//                                 {/* <p>Feb 10, 2021</p> */}
+//                                 <p className="reply-para">Replies 10 <IoIosArrowDown onClick={() => setShowReply(!showReply) } /> <RiThumbUpLine/> 20 likes</p>
+                                 
+//                                 { showReply ? 
+                                
+//                                 <div className='reply-div'>
+
+//                                 {replyArray.map((rep) => {
+//                                    return (
+                                       
+//                                        <p>{rep.reply}</p>
+//                                    )
+//                                 })}
+
+//                                 </div>
+
+//                                 : null }
+                                
+
+
+//                                 </div>
+                                
+//                             </div>
+//                         )
+//                     })}
+                    
+
+//                 </div>
+                  
+//                ) 
+               
+                           
+//                } 
+
+

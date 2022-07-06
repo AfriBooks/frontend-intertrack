@@ -13,14 +13,14 @@ import { BsBag } from 'react-icons/bs';
 import { useSelector } from 'react-redux';
 import axios from 'axios';
 import { BsStar } from 'react-icons/bs';
-import Cookies from 'js-cookie';
+
 
 
 export const Header = () => {
-  const current_user = Cookies.get("afribook_currentUser");
-  //const current_user = JSON.parse(localStorage.getItem("afribook_user"))
-console.log(current_user)
-  //const current_user_name = current_user.name
+  
+  const current_user = JSON.parse(localStorage.getItem("afribook_user"))
+  console.log(current_user)
+  const { name } = current_user.data;
 
   const { cartTotalQuantity } = useSelector(state => state.cart)
 
@@ -133,10 +133,18 @@ useEffect(() => {
             <div className='notification-div'><IoIosNotificationsOutline/></div>
             <div className='profle-div'>
                 <div className='avatar-div'><img className='avatar' src='https://thumbs.dreamstime.com/b/default-avatar-profile-vector-user-profile-default-avatar-profile-vector-user-profile-profile-179376714.jpg' alt='pic' /></div>
-                <p className='profile-name'>{}</p>
+                <p className='profile-name'>{name}</p>
 
             </div>
-            <div className='drop-down-div'><IoIosArrowDown/></div>
+            <div className='drop-down-div-home'> 
+              <IoIosArrowDown className='drop-down-icon-home'/> 
+              <div className='drop-down-content-home'>
+                <p> <Link to=""> Profile </Link></p>
+                <p> <Link to="/sign-in-two" > Logout </Link></p>
+                <p> <Link to="/"> Register </Link></p>
+
+              </div>
+            </div>
 
           </div>
 
@@ -165,9 +173,7 @@ useEffect(() => {
 
           <div>
 
-          {auth._id ? <div>Logout</div> 
-          : <div className='header-login-div'><div><Link to="/sign-in-two"> Login</Link></div>
-          <div className='header-reg'><Link to="/"> Register</Link></div></div>}
+         
 
           </div>
 

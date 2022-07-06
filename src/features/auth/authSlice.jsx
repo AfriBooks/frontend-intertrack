@@ -31,7 +31,10 @@ export const registerUser = createAsyncThunk (
 
             if (token) {
 
+                localStorage.setItem("afribook_user", JSON.stringify(token));
+
                 window.location.pathname = "/home";
+                
                 alert("Register successful! Click ok to continue")
 
                 toast.success("Register successful", {position: "top-left" }) 
