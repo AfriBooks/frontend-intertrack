@@ -12,7 +12,6 @@ import { MdOutlineLibraryBooks } from 'react-icons/md';
 import { BsBag } from 'react-icons/bs';
 import { useSelector } from 'react-redux';
 import axios from 'axios';
-import { BsStar } from 'react-icons/bs';
 
 
 
@@ -147,6 +146,8 @@ useEffect(() => {
             </div>
 
           </div>
+
+          
 
         </div>
 

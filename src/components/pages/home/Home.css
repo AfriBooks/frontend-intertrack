@@ -12,7 +12,7 @@
 .header-home {
     width: 100%;
     height: 110px;
-    background-color: #ffffff;
+    background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -21,6 +21,10 @@
     position: fixed;
     top: 0;
     z-index: 1;
+}
+
+.mobile--menu-icon {
+    display: none;
 }
 
 .home--card--container-1 {
@@ -298,4 +302,19 @@
 .card-two--section {
     display: flex;
     justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .header-nav-bar-1-b {
+        display: none;
+    }
+    .header-search-bar-div {
+        display: none;
+    }
+    .header-nav-bar-1-c {
+        display: none;
+    }
+    .mobile--menu-icon {
+        display: block;
+    }
 }
