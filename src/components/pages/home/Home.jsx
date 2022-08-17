@@ -15,6 +15,7 @@ import { AiOutlineHome } from 'react-icons/ai';
 import { FiBookOpen } from 'react-icons/fi';
 import { MdOutlineLibraryBooks } from 'react-icons/md';
 import axios from 'axios';
+import { GiHamburgerMenu} from 'react-icons/gi';
 
 
 
@@ -197,6 +198,10 @@ const getBooks = category.map(product => {
               </div>
             </div>
 
+          </div>
+
+          <div className='mobile--menu-icon'>
+              <GiHamburgerMenu/>
           </div>
 
         </div>

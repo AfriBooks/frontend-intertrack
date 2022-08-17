@@ -17,7 +17,7 @@ export const PasswordReset = () => {
               <div key={product.id} className="product">
                   
                   <div className="card--img--div">
-                      <img className='card--img' src= {product.book_image} alt='' />
+                      <img className='card--img' src= {product.cover} alt='' />
                   </div>
                   
   

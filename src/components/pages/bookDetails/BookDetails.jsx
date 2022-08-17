@@ -26,6 +26,10 @@ export const BookDetails = () => {
     const reviewArray = singleItem.reviews;
     console.log(reviewArray)
 
+    const [radio, setRadio] = useState("")
+
+    const [bookPrice, setBookPrice] = useState(0)
+
 
     
 
@@ -101,6 +105,55 @@ useEffect(() => {
 
 //const getReviews 
 
+const buyNow = () => {
+    try{
+    if (!radio) {
+        return alert('Please select Paperback or Ebook');
+
+
+      }
+      // eslint-disable-next-line no-undef
+      let handler = PaystackPop.setup({
+        key: 'pk_test_1753f1905d298420e63a09376a74b329bfb22343',
+        email: 'doyinapollos@gmail.com',
+        amount: parseInt(bookPrice) * 100,
+        onClose: function () {
+          alert('Window closed.');
+        },
+        callback: function (response) {
+          let message = 'Thank you for your donation!';
+          alert(message);
+          //location.reload();
+        }
+      });
+    
+      handler.openIframe();
+
+    //   if (radio === 'paper-back') {
+
+    //     const price = singleItem.price;
+
+    //    return setBookPrice(price)
+       
+
+    //   } else if (radio === 'e-book') {
+
+    //     const price = document.getElementById('e-book-price');
+
+    //    return setBookPrice(price.textContent)
+      //}
+    }
+      catch(error) {
+        console.log(error)
+      }
+      
+
+        
+
+      
+    
+}
+
 
   return (
     <div className='bookDetails'>
@@ -121,22 +174,27 @@ useEffect(() => {
                     <h3 className='title-book'>{singleItem.title}</h3>
                     <p className='author-name'>{singleItem.author}</p>
                     <p className='paper-book'><strong>Paperback: N{singleItem.price}</strong></p>
-                    <p className='e-book'><strong> Ebook: N1500</strong></p>
+                    <p className='e-book'><strong> Ebook: N <span id='e-book-price'> 1500 </span></strong></p>
                     <div className='rating-div'><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/></div>
+                    
                     <div className='radio-btn-div'>
                         <p className='choose-format-para'>Choose prefered format</p>
                         <div className='radio-btn-div-sub'>
-                            <input type="radio" id="paper-back" name="book-type" value="paper-back" />
+                            <input type="radio" id="paper-back" name="book-type" 
+                            value="paper-back" onChange={(e) => {setRadio(e.target.value); setBookPrice(singleItem.price)}} />
+
                               <label for="paper-back">Paperback</label>
                               
-                            <input className='e-book-radio' type="radio" id="e-book" name="book-type" value="e-book" />
+                            <input className='e-book-radio' type="radio" id="e-book" name="book-type" 
+                            value="e-book" onChange={(e) => {setRadio(e.target.value); const price = document.getElementById('e-book-price'); setBookPrice(price.textContent)}} />
                               <label for="e-book">Ebook</label>
 
                         </div>
 
                     </div>
+
                     <div className='buy-now-div'>
-                        <button className='buy-now-btn'>Buy now</button>
+                        <button className='buy-now-btn' onClick={buyNow}>Buy now</button>
                         <button className='add-to-cart-btn' onClick={() => handleAddToCart(singleItem)}>Add to cart</button>
 
                     </div>
@@ -183,57 +241,6 @@ useEffect(() => {
                    {/* <p>Showing 1 - 5 of 24 reviews</p> */}
 
                 </div>
-               
-                { !reviews.length > 0 ? (
-                    <div>
-                        <p>This book has no review</p>
-                    </div>
-                ) :
-                (
-                    
-                     <div>
-                     {reviews.map((rev) => {
-                        const replyArray = rev.replies;
-                         return (
-                             <div>
-                                 <div className='single-review-div'>
-                                 <h4>{rev.user.username}</h4>
-                                 <p><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/></p>
-                                 <p>{rev.review} </p>
-                                {/* <p>Feb 10, 2021</p> */}
-                                <p className="reply-para">Replies 10 <IoIosArrowDown onClick={() => setShowReply(!showReply) } /> <RiThumbUpLine/> 20 likes</p>
-                                 
-                                { showReply ? 
-                                
-                                <div className='reply-div'>
-
-                                {replyArray.map((rep) => {
-                                   return (
-                                       
-                                       <p>{rep.reply}</p>
-                                   )
-                                })}
-
-                                </div>
-
-                                : null }
-                                
-
-
-                                </div>
-                                
-                            </div>
-                        )
-                    })}
-                    
-
-                </div>
-                  
-               ) 
-               
-                           
-               } 
-                
                
                 
                
@@ -355,5 +362,57 @@ reviews.map((rev) => {
                
                            
 //                } 
+
+
+// { !reviews.length > 0 ? (
+//     <div>
+//         <p>This book has no review</p>
+//     </div>
+// ) :
+// (
+    
+//      <div>
+//      {reviews.map((rev) => {
+//         const replyArray = rev.replies;
+//          return (
+//              <div>
+//                  <div className='single-review-div'>
+//                  <h4>{rev.user.username}</h4>
+//                  <p><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/></p>
+//                  <p>{rev.review} </p>
+//                 {/* <p>Feb 10, 2021</p> */}
+//                 <p className="reply-para">Replies 10 <IoIosArrowDown onClick={() => setShowReply(!showReply) } /> <RiThumbUpLine/> 20 likes</p>
+                 
+//                 { showReply ? 
+                
+//                 <div className='reply-div'>
+
+//                 {replyArray.map((rep) => {
+//                    return (
+                       
+//                        <p>{rep.reply}</p>
+//                    )
+//                 })}
+
+//                 </div>
+
+//                 : null }
+                
+
+
+//                 </div>
+                
+//             </div>
+//         )
+//     })}
+    
+
+// </div>
+  
+// ) 
+
+           
+// } 
+
 
 
