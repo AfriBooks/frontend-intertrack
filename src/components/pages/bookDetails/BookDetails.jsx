@@ -121,7 +121,7 @@ const buyNow = () => {
           alert('Window closed.');
         },
         callback: function (response) {
-          let message = 'Thank you for your donation!';
+          let message = 'Thank you for your patronage!';
           alert(message);
           //location.reload();
         }

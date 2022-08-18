@@ -25,6 +25,7 @@ import { SignInOne } from "./components/pages/signInOne/SignInOne";
 import { SignInTwo } from "./components/pages/signInTwo/SignInTwo";
 import { VerifyEmail } from "./components/pages/verifyEmail/VerifyEmail";
 import {ToastContainer} from "react-toastify"
+import { LandPage } from "./components/pages/landingPage/LandPage";
 
 function App() {
     return ( 
@@ -33,9 +34,10 @@ function App() {
         <Router>
             <ToastContainer/>
             <Switch>
-            
-                <Route exact path= "/"> <CreateAccountForm/> </Route> 
+
+                <Route exact path= "/"> <LandPage/> </Route>
                 <Route exact path= "/home"> <Home/> </Route>
+                <Route exact path= "/create-account-form"> <CreateAccountForm/> </Route> 
                 <Route exact path= "/register"> <CreateAccount/> </Route>
                 <Route exact path= "/verify-email"> <VerifyEmail/> </Route>
                 <Route exact path= "/sign-in-one"> <SignInOne/> </Route>
@@ -56,6 +58,7 @@ function App() {
                 <Route exact path= "/library"> <Library/> </Route>
                 <Route exact path= "/best-romance"> <BestRomance/> </Route>
                 <Route exact path= "/genre"> <Genre/> </Route>
+                
                 
                 
             </Switch> 

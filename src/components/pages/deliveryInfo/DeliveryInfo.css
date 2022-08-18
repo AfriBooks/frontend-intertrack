@@ -219,7 +219,7 @@
 
 .single-order-div-cart {
     width: 100%;
-    height: 90px;
+    height: 150px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -228,8 +228,9 @@
 
 .single-order-image-div {
     width: 21%;
-    height: 80%;
+    height: 100%;
     display: flex;
+    background-color: aqua;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -247,6 +248,7 @@
     flex-direction: column;
     justify-content: space-around;
     font-size: 1.2rem;
+    margin-left: 7px;
 }
 
 .remove-btn-cart {
@@ -311,4 +313,81 @@
     align-items: center;
     font-size: 1.4rem;
     border-top: 1px solid gainsboro;
+}
+
+
+/*delivery form */
+
+.delivery-input {
+    width: 390px;
+    height: 58px;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    background-color: #ffffff;
+    border: 1px solid gainsboro;
+    padding-left: 10px;
+}
+
+.delivery-address-textarea {
+    width: 390px;
+    height: 65px;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    background-color: #ffffff;
+    border: 1px solid gainsboro;
+    padding-left: 10px;
+}
+
+.Continue-to-payment-btn {
+    width: 400px;
+    height: 64px;
+    border-radius: 12px;
+    font-size: 1.5rem;
+    gap: 8px;
+    padding: 16px 32px;
+    margin-top: 20px;
+    border: none;
+    background-color: #bfc3c0;
+    font-family: "Noto San";
+    cursor: pointer;
+}
+
+.clear-cart-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 25px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    gap: 8px;
+    padding: 16px 32px;
+    margin-bottom: 20px;
+    border: none;
+    background-color: #bfc3c0;
+    font-family: "Noto San";
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.continue-shopping a {
+    color: #5a7c65;
+}
+
+.remove-btn-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 18px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    gap: 8px;
+    padding: 10px 10px;
+    border: none;
+    background-color: #bfc3c0;
+    font-family: "Noto San";
+    cursor: pointer;
+    color: #000;
+    margin-top: 7px;
 }

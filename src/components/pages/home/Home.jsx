@@ -192,8 +192,8 @@ const getBooks = category.map(product => {
               <IoIosArrowDown className='drop-down-icon-home'/> 
               <div className='drop-down-content-home'>
                 <p> <Link to=""> Profile </Link></p>
-                <p> <Link to="/sign-in-two" > Logout </Link></p>
-                <p> <Link to="/"> Register </Link></p>
+                <p> <Link to="/" > Logout </Link></p>
+                {/* <p> <Link to="/"> Register </Link></p> */}
 
               </div>
             </div>
@@ -223,10 +223,13 @@ const getBooks = category.map(product => {
                <div className='filter-div'>
                 <p className='filter'>Filter</p>
                 <RiMistFill className='filter-icon'/>
-
+                  
                </div>
+               
 
           </div>
+
+          
 
         </div>
 
