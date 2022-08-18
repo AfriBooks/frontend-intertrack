@@ -102,13 +102,21 @@
     display: flex;
 }
 
-.buy-now-btn {
+.buy-now-btn-2 {
+    background-color: #5a7c65;
     width: 100px;
     height: 30px;
-    background-color: #5a7c65;
     border-radius: 6px;
     border: none;
     color: white;
+}
+
+.buy-now-btn {
+    width: 100px;
+    height: 30px;
+    border: 3px solid #5a7c65;
+    border-radius: 6px;
+    color: #5a7c65;
 }
 
 .add-to-cart-btn {
@@ -251,7 +259,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.3rem
+    font-size: 1.3rem;
 }
 
 .bookDetails-div-3-b {

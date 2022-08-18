@@ -17,14 +17,26 @@ import axios from 'axios';
 
 export const Header = () => {
   
-  const current_user = JSON.parse(localStorage.getItem("afribook_user"))
-  console.log(current_user)
-  const { name } = current_user.data;
+  const [currentUserObject, setCurrentUserObject] = useState({})
+
+  useEffect(() => {
+    const current_user_email = JSON.parse(localStorage.getItem('afribook_user_email'));
+    axios.get('https://afribook.herokuapp.com/users').then(result => {
+        const { users } = result.data;
+        for (let user in users) {
+            if (users[user].email === current_user_email) {
+                return setCurrentUserObject(users[user]);
+            }
+        }
+    })
+})
+
+  // const current_user = JSON.parse(localStorage.getItem("afribook_user"))
+  const name = currentUserObject.name;
 
   const { cartTotalQuantity } = useSelector(state => state.cart)
 
   const auth = useSelector(state => state.auth)
-  console.log(auth._id)
 
 
   const [filterItem, setFilterItem] = useState("")
@@ -42,7 +54,6 @@ export const Header = () => {
   })
   if(response) {
     
-    console.log(response.data)
     setFilterItem(response.dada)
   }
 }
@@ -105,7 +116,7 @@ useEffect(() => {
 
         <div className='header-nav-bar-1'>
           <div className='header-nav-bar-1-a'>
-              <div className='logo-div'><h3 className='logo'> AfriBook</h3> </div> 
+              <div className='logo-div'><h3 className='logo'><a href="/">AfriBook</a></h3> </div> 
 
           </div>
           <div className='header-nav-bar-1-b'>
@@ -158,7 +169,7 @@ useEffect(() => {
                 <li className='header-list'><Link to="/home"><AiOutlineHome/> Home </Link></li>
                 <li className='header-list'><Link to="/library"><FiBookOpen/> My Library </Link></li>
                 <li className='header-list'><Link to="/genre"><MdOutlineLibraryBooks/> Genre </Link></li>
-                <li className='header-list'><Link to="/delivery-info"><BsCart/> My order<div className='cart-qty-num-div'>{cartTotalQuantity}</div> </Link></li>
+                <li className='header-list'><Link to="/order"><BsCart/> My orders </Link></li>
                 {/*<li className='header-list'><Link to="/register"> Register </Link></li>
                 <li className='header-list'><Link to="/sign-in-one"><MdOutlineLibraryBooks/> Sign In </Link></li>
                 <li className='header-list'><Link to="/desc-best"><BsBag/> Best </Link></li>

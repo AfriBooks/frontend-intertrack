@@ -167,7 +167,7 @@ const getBooks = category.map(product => {
 
         <div className='header-nav-bar-1'>
           <div className='header-nav-bar-1-a'>
-              <div className='logo-div'><h3 className='logo'> AfriBook</h3> </div> 
+              <div className='logo-div'><h3 className='logo'><a href="/">AfriBook</a></h3> </div> 
 
           </div>
           <div className='header-nav-bar-1-b'>
@@ -213,7 +213,7 @@ const getBooks = category.map(product => {
                 <li className='header-list'><Link to="/home"><AiOutlineHome/> Home </Link></li>
                 <li className='header-list'><Link to="/library"><FiBookOpen/> My Library </Link></li>
                 <li className='header-list'><Link to="/genre"><MdOutlineLibraryBooks/> Genre </Link></li>
-                <li className='header-list'><Link to="/delivery-info"><BsCart/> My order<div className='cart-qty-num-div'>{cartTotalQuantity}</div> </Link></li>
+                <li className='header-list'><Link to="/orders"><BsCart/> My orders</Link></li>
             </ul>
           </div>
 

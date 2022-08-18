@@ -8,6 +8,7 @@ import { logInUser } from '../../../features/auth/signInSlice'
 
 export const SignInTwo = () => {
 
+    const [loading, setLoading] = useState(false);
     const [ signIn, setsignIn ] = useState({
         email: "",
         password: "",
@@ -23,8 +24,9 @@ export const SignInTwo = () => {
 
     const handleSignIn = (e) => {
         e.preventDefault()
-
+        setLoading(true);
         dispatch(logInUser(signIn))
+        setLoading(false);
     }
 
     const {items, status} = useSelector(state => state.products);
@@ -85,7 +87,7 @@ export const SignInTwo = () => {
                         <p className='forgot-password'><Link to="/password-reset"> Forgot password? </Link></p>
                         </div>
 
-                        <button className='sign-up-two-btn'>Sign in</button>
+                        <button className='sign-up-two-btn' disabled={loading}>{loading ? "Please wait..": "Sign in"}</button>
 
                    
                     </form>

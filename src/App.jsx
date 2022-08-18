@@ -26,6 +26,8 @@ import { SignInTwo } from "./components/pages/signInTwo/SignInTwo";
 import { VerifyEmail } from "./components/pages/verifyEmail/VerifyEmail";
 import {ToastContainer} from "react-toastify"
 import { LandPage } from "./components/pages/landingPage/LandPage";
+import { Orders } from "./components/pages/ordersPage/orders";
+import { GenreSearch } from "./components/pages/genre/GenreSearch";
 
 function App() {
     return ( 
@@ -58,11 +60,9 @@ function App() {
                 <Route exact path= "/library"> <Library/> </Route>
                 <Route exact path= "/best-romance"> <BestRomance/> </Route>
                 <Route exact path= "/genre"> <Genre/> </Route>
-                
-                
-                
+                <Route exact path= "/genre-search"> <GenreSearch/> </Route>
+                <Route exact path="/orders"> <Orders /> </Route>
             </Switch> 
-
           </Router>
 
         </div>
