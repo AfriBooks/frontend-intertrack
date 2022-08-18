@@ -75,7 +75,7 @@ export const Orders = () => {
         <>
             <Header />
             <main style={{ marginTop: "15vh", padding: "0 10%" }}>
-                <h4>My Orders</h4>
+                <h4 className="my-orders">My Orders</h4>
 
                 {message ? (
                     { message }

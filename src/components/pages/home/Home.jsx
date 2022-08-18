@@ -211,7 +211,7 @@ const getBooks = category.map(product => {
           <div className='header-nav-bar-2-a'>
             <ul className='header-nav-bar-ul'>
                 <li className='header-list'><Link to="/home"><AiOutlineHome/> Home </Link></li>
-                <li className='header-list'><Link to="/library"><FiBookOpen/> My Library </Link></li>
+                <li className='header-list'> </li>
                 <li className='header-list'><Link to="/genre"><MdOutlineLibraryBooks/> Genre </Link></li>
                 <li className='header-list'><Link to="/orders"><BsCart/> My orders</Link></li>
             </ul>
@@ -221,8 +221,8 @@ const getBooks = category.map(product => {
 
           <div className='header-nav-bar-2-b'>
                <div className='filter-div'>
-                <p className='filter'>Filter</p>
-                <RiMistFill className='filter-icon'/>
+                {/* <p className='filter'>Filter</p>
+                <RiMistFill className='filter-icon'/> */}
                   
                </div>
                

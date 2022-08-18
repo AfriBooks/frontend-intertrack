@@ -261,21 +261,8 @@ export const DeliveryInfo = () => {
                                                     </div>
                                                     <div className="single-order-count-div-cart">
                                                         <div className="single-order-count-div-sub">
-                                                            <button
-                                                                className="add-btn"
-                                                                onClick={() =>
-                                                                    handleIncreaseCart(
-                                                                        cartItem
-                                                                    )
-                                                                }
-                                                            >
-                                                                +
-                                                            </button>
-                                                            <p className="qty">
-                                                                {
-                                                                    cartItem.cartQuantity
-                                                                }
-                                                            </p>
+                                                            
+                                                            
                                                             <button
                                                                 className="minus-btn"
                                                                 onClick={() =>
@@ -285,6 +272,21 @@ export const DeliveryInfo = () => {
                                                                 }
                                                             >
                                                                 -
+                                                            </button>
+                                                            <p className="qty">
+                                                                {
+                                                                    cartItem.cartQuantity
+                                                                }
+                                                            </p>
+                                                            <button
+                                                                className="add-btn"
+                                                                onClick={() =>
+                                                                    handleIncreaseCart(
+                                                                        cartItem
+                                                                    )
+                                                                }
+                                                            >
+                                                                +
                                                             </button>
                                                         </div>
                                                     </div>

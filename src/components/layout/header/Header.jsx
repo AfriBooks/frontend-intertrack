@@ -151,7 +151,7 @@ useEffect(() => {
               <div className='drop-down-content-home'>
                 <p> <Link to=""> Profile </Link></p>
                 <p> <Link to="/sign-in-two" > Logout </Link></p>
-                <p> <Link to="/"> Register </Link></p>
+                
 
               </div>
             </div>
@@ -167,7 +167,7 @@ useEffect(() => {
           <div className='header-nav-bar-2-a'>
             <ul className='header-nav-bar-ul'>
                 <li className='header-list'><Link to="/home"><AiOutlineHome/> Home </Link></li>
-                <li className='header-list'><Link to="/library"><FiBookOpen/> My Library </Link></li>
+                <li className='header-list'></li>
                 <li className='header-list'><Link to="/genre"><MdOutlineLibraryBooks/> Genre </Link></li>
                 <li className='header-list'><Link to="/order"><BsCart/> My orders </Link></li>
                 {/*<li className='header-list'><Link to="/register"> Register </Link></li>
@@ -193,8 +193,8 @@ useEffect(() => {
 
           <div className='header-nav-bar-2-b'>
                <div className='filter-div'>
-                <p className='filter'>Filter</p>
-                <RiMistFill className='filter-icon'/>
+                {/* <p className='filter'>Filter</p>
+                <RiMistFill className='filter-icon'/> */}
 
                </div>
 
