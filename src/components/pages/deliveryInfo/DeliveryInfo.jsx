@@ -134,7 +134,7 @@ export const DeliveryInfo = () => {
                         
                         </div>
 
-                        <button className='Continue-to-payment-btn'><Link to="/sign-in-two"> Sign in to pay </Link></button>
+                        <button className='Continue-to-payment-btn'> Pay now </button>
 
                     </form>
 
@@ -176,9 +176,10 @@ export const DeliveryInfo = () => {
                                             </div>
                                             <div className='single-order-count-div-cart'>
                                                 <div className='single-order-count-div-sub'>
-                                                    <button className='add-btn' onClick={() => handleIncreaseCart(cartItem)}>+</button>
-                                                    <p className='qty'>{cartItem.cartQuantity}</p>
+                                                    
                                                     <button className='minus-btn' onClick={() => handleDecreaseCart(cartItem)}>-</button>
+                                                    <p className='qty'>{cartItem.cartQuantity}</p>
+                                                    <button className='add-btn' onClick={() => handleIncreaseCart(cartItem)}>+</button>
 
                                                 </div>
 
@@ -203,7 +204,7 @@ export const DeliveryInfo = () => {
                                     </div>
 
                                     <button className='clear-cart-btn' onClick={() => handleClearCart()}>Clear cart</button>
-                                  <div><Link to = "/home"> Continue shopping</Link></div>
+                                  <div className='continue-shopping'><Link to = "/home"> Continue shopping</Link></div>
                             </div>
                             )}
                             
@@ -226,34 +227,34 @@ export const DeliveryInfo = () => {
 
 
 /* <div className='single-order-div'>
-                                <div className='single-order-image-div'>
-                                    <img className='single-order-image' src='https://africanbookaddict.files.wordpress.com/2018/12/wrbg.jpg' alt='' />
+        <div className='single-order-image-div'>
+            <img className='single-order-image' src='https://africanbookaddict.files.wordpress.com/2018/12/wrbg.jpg' alt='' />
 
-                                </div>
-                                <div className='single-order-title-div'>
-                                    <h4>Book title</h4>
-                                    <p>Book author</p>
-                                    <div className='deliv-rating'><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/></div>
-                                    <p>N 9,000</p>
+        </div>
+        <div className='single-order-title-div'>
+            <h4>Book title</h4>
+            <p>Book author</p>
+            <div className='deliv-rating'><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/><AiOutlineStar/></div>
+            <p>N 9,000</p>
 
-                                </div>
-                                <div className='single-order-count-div'>
-                                    <div className='single-order-count-div-sub'>
-                                        <button className='add-btn'>+</button>
-                                        <p className='qty'>1</p>
-                                        <button className='minus-btn'>-</button>
+        </div>
+        <div className='single-order-count-div'>
+            <div className='single-order-count-div-sub'>
+                <button className='add-btn'>+</button>
+                <p className='qty'>1</p>
+                <button className='minus-btn'>-</button>
 
-                                    </div>
+            </div>
 
-                                </div>
+        </div>
 
-                            </div>
-                            
-                            <div className='total-div'>
-                                <h4>Total</h4>
-                                <h4>N 18,000</h4>
+    </div>
+    
+    <div className='total-div'>
+        <h4>Total</h4>
+        <h4>N 18,000</h4>
 
-                             </div>
+        </div>
 
 
 
@@ -271,9 +272,9 @@ export const DeliveryInfo = () => {
 </div>
 <div className='single-order-count-div'>
     <div className='single-order-count-div-sub'>
-        <button className='add-btn'>+</button>
+        <button className='add-btn'>-</button>
         <p className='qty'>1</p>
-        <button className='minus-btn'>-</button>
+        <button className='minus-btn'>+</button>
 
     </div>
 

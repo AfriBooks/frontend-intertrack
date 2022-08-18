@@ -16,7 +16,6 @@
     width: 100%;
     height: 60%;
     display: flex;
-    background-color: red;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
@@ -97,7 +96,7 @@
 
 .switch-to-author-btn {
     width: 119px;
-    height: 16px;
+    height: 18px;
     font-family: 'Noto Sans';
     font-weight: 600;
     font-size: 12px;
@@ -214,11 +213,11 @@
 }
 
 .header-nav-bar-2-b {
-    width: 20%;
+    width: 40%;
     height: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
 }
 

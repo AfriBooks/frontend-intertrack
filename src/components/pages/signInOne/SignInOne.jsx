@@ -45,7 +45,7 @@ export const SignInOne = () => {
 
             <div className='signinOne-form-div'>
                 <div className='signinOne-form-div-inner'>
-                    <h3 className='Create account-h3'>Wellcome back</h3>
+                    <h3 className='Create account-h3'>Welcome back</h3>
                     <button className='create-account-google'><FcGoogle/> Login with Google</button>
                     <div className='horizontal-line-div'>
                         <span><hr className='horizontal-line' /></span>

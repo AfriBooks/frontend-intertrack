@@ -79,7 +79,7 @@ export const CreateAccountForm = () => {
     <div className='createAccountForm-div-left-two'>
     
         <div className='createAccountForm-bar-two'>
-            <h3>AfriBook</h3>
+            <h3><Link to=''> AfriBook </Link></h3>
         </div>
 
         <div className='createAccountForm-div-two'>

@@ -60,13 +60,13 @@ export const SignInTwo = () => {
         <div className='sign-in-account-div-left-two'>
 
             <div className='signin-two-bar'>
-               <div className='signinTwo-afribook'> <h3> AfriBook</h3></div>
+               <div className='signinTwo-afribook'> <h3><Link to='/'> AfriBook </Link></h3></div>
             
             </div>
 
             <div className='signin-two-form-div'>
                 <div className='signin-two-form-div-inner'>
-                    <div className='signin-two-h3-div'><h3 className='signin-two-h3'>Wellcome back</h3></div>
+                    <div className='signin-two-h3-div'><h3 className='signin-two-h3'>Welcome back</h3></div>
                     
         
 
@@ -90,7 +90,7 @@ export const SignInTwo = () => {
                    
                     </form>
                     
-                    <p className='sign-in-account-para-two-2'>Don't have an account?<Link to="/"> Sign up </Link></p>
+                    <p className='sign-in-account-para-two-2'>Don't have an account?<Link to="/create-account-form"> Sign up </Link></p>
 
                 </div>
             </div>

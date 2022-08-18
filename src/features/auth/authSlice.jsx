@@ -37,7 +37,7 @@ export const registerUser = createAsyncThunk (
                 
                 alert("Register successful! Click ok to continue")
 
-                toast.success("Register successful", {position: "top-left" }) 
+                toast.success("Register successful", {position: "top-right" }) 
             }
             const [data] = token;
             if (data.status === "200") {
